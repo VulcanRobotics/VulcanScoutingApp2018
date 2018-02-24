@@ -169,12 +169,8 @@ class Panel(wx.Panel):
             writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':self.teamNumInput.GetValue(), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'teleopFromExchange':self.teleOpFromExchangeInput.GetValue(), 'teleopFromPZ':self.teleOpFromPlatformInput.GetValue(), 'teleopFromPCZ':self.teleOpFromPowerCubeInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue()})
 
 
-
-
-
-
 app = wx.App(False)
-frame = wx.Frame(None, title = "1218 Vulcan Scouting 2018", size = (800, 800))
+frame = wx.Frame(None, title = "1218 Vulcan Scouting 2018 - Scouts Input", size = (800, 800))
 panel = Panel(frame)
 frame.Show()
 app.MainLoop()
