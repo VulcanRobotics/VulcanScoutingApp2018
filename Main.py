@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 import wx
 import csv
+import os
+import module_locator
+
+
+#locate the Package
+myPath = module_locator.module_path()
 
 
 class Panel(wx.Panel):
@@ -36,7 +42,7 @@ class Panel(wx.Panel):
         self.autonScaleInputUp = wx.Button(self, label="+", pos=(350, 157.5), size=(25,25), name="autonScaleInputUp")
         self.autonScaleInputDown = wx.Button(self, label="-", pos=(380, 157.5), size=(25,25), name="autonScaleInputDown")
 
-        self.autonPlatformTitle = wx.StaticText(self, label="# of cubes got from the Plateform Zone", pos=(20, 180))
+        self.autonPlatformTitle = wx.StaticText(self, label="# of cubes got from the Platform Zone", pos=(20, 180))
         self.autonPlatformInput = wx.TextCtrl(self, pos=(300, 180), size=(30,20))
         self.autonPlatformInput.AppendText("0")
         self.autonPlatformInputUp = wx.Button(self, label="+", pos=(350, 177.5), size=(25,25), name="autonPlatformInputUp")
@@ -82,37 +88,50 @@ class Panel(wx.Panel):
         self.teleOpOppoSwitchInputUp = wx.Button(self, label="+", pos=(270, 347.5), size=(25,25), name="teleOpOppoSwitchInputUp")
         self.teleOpOppoSwitchInputDown = wx.Button(self, label="-", pos=(300, 347.5), size=(25,25), name="teleOpOppoSwitchInputDown")
 
-        self.teleOpFromExchangeTitle = wx.StaticText(self, label="# of cubes acquired from the Exchange", pos=(350, 290))
-        self.teleOpFromExchangeInput = wx.TextCtrl(self, pos=(640, 290), size=(30,20))
-        self.teleOpFromExchangeInput.AppendText("0")
-        self.teleOpFromExchangeInputUp = wx.Button(self, label="+", pos=(690, 287.5), size=(25,25), name="teleOpFromExchangeInputUp")
-        self.teleOpFromExchangeInputDown = wx.Button(self, label="-", pos=(720, 287.5), size=(25,25), name="teleOpFromExchangeInputDown")
+        # self.teleOpFromExchangeTitle = wx.StaticText(self, label="# of cubes acquired from the Exchange", pos=(350, 290))
+        # self.teleOpFromExchangeInput = wx.TextCtrl(self, pos=(640, 290), size=(30,20))
+        # self.teleOpFromExchangeInput.AppendText("0")
+        # self.teleOpFromExchangeInputUp = wx.Button(self, label="+", pos=(690, 287.5), size=(25,25), name="teleOpFromExchangeInputUp")
+        # self.teleOpFromExchangeInputDown = wx.Button(self, label="-", pos=(720, 287.5), size=(25,25), name="teleOpFromExchangeInputDown")
+        #
+        # self.teleOpFromPlatformTitle = wx.StaticText(self, label="# of cubes acquired from the Platform Zone", pos=(350, 310))
+        # self.teleOpFromPlatformInput = wx.TextCtrl(self, pos=(640, 310), size=(30,20))
+        # self.teleOpFromPlatformInput.AppendText("0")
+        # self.teleOpFromPlatformInputUp = wx.Button(self, label="+", pos=(690, 307.5), size=(25,25), name="teleOpFromPlatformInputUp")
+        # self.teleOpFromPlatformInputDown = wx.Button(self, label="-", pos=(720, 307.5), size=(25,25), name="teleOpFromPlatformInputDown")
+        #
+        # self.teleOpFromPowerCubeTitle = wx.StaticText(self, label="# of cubes acquired from the Power Cube Zone", pos=(350, 330))
+        # self.teleOpFromPowerCubeInput = wx.TextCtrl(self, pos=(640, 330), size=(30,20))
+        # self.teleOpFromPowerCubeInput.AppendText("0")
+        # self.teleOpFromPowerCubeInputUp = wx.Button(self, label="+", pos=(690, 327.5), size=(25,25), name="teleOpFromPowerCubeInputUp")
+        # self.teleOpFromPowerCubeInputDown = wx.Button(self, label="-", pos=(720, 327.5), size=(25,25), name="teleOpFromPowerCubeInputDown")
 
-        self.teleOpFromPlatformTitle = wx.StaticText(self, label="# of cubes acquired from the Platform Zone", pos=(350, 310))
-        self.teleOpFromPlatformInput = wx.TextCtrl(self, pos=(640, 310), size=(30,20))
-        self.teleOpFromPlatformInput.AppendText("0")
-        self.teleOpFromPlatformInputUp = wx.Button(self, label="+", pos=(690, 307.5), size=(25,25), name="teleOpFromPlatformInputUp")
-        self.teleOpFromPlatformInputDown = wx.Button(self, label="-", pos=(720, 307.5), size=(25,25), name="teleOpFromPlatformInputDown")
+        # self.teleOpCubesAcquiredTitle = wx.StaticText(self, label="# of cubes acquired in total", pos=(20, 380))
 
-        self.teleOpFromPowerCubeTitle = wx.StaticText(self, label="# of cubes acquired from the Power Cube Zone", pos=(350, 330))
-        self.teleOpFromPowerCubeInput = wx.TextCtrl(self, pos=(640, 330), size=(30,20))
-        self.teleOpFromPowerCubeInput.AppendText("0")
-        self.teleOpFromPowerCubeInputUp = wx.Button(self, label="+", pos=(690, 327.5), size=(25,25), name="teleOpFromPowerCubeInputUp")
-        self.teleOpFromPowerCubeInputDown = wx.Button(self, label="-", pos=(720, 327.5), size=(25,25), name="teleOpFromPowerCubeInputDown")
-
-        self.teleOpParked = wx.RadioBox(self, label="Robot parked on the Platform\\?", pos=(20, 380), choices=["Yes", "Attempted", "No"])
-        self.teleOpClimbed = wx.RadioBox(self, label="Robot successfully climbed\\?", pos=(320, 380), choices=["Yes", "Attempted", "No"])
-        self.teleOpTeamwork =  wx.RadioBox(self, label="Robot has mechanisms to assist others with climbing\\?", pos=(20, 430), choices=["Yes", "Attempted", "No"])
+        self.teleOpParked = wx.RadioBox(self, label="Robot parked on the Platform?", pos=(20, 380), choices=["Yes", "Attempted", "No"])
+        self.teleOpClimbed = wx.RadioBox(self, label="Robot successfully climbed?", pos=(320, 380), choices=["Yes", "Attempted", "No"])
+        self.teleOpTeamwork =  wx.RadioBox(self, label="Robot has mechanisms to assist others with climbing?", pos=(20, 430), choices=["Yes", "Attempted", "No"])
 
 
         #Post-Match questions
         self.postMatchTitle = wx.StaticText(self, label="Post-Match Questions", pos=(20, 480))
 
-        self.strategyTitle = wx.StaticText(self, label="Any specific strategies\\?", pos=(20, 500))
+        self.strategyTitle = wx.StaticText(self, label="Any specific defensive strategies?", pos=(20, 500))
         self.strategyInput = wx.TextCtrl(self, pos=(300, 500), size = (300, 20))
 
-        self.penaltyTitle = wx.StaticText(self, label="Any fouls or penalties\\?", pos=(20, 520))
+        self.penaltyTitle = wx.StaticText(self, label="Any fouls or penalties?", pos=(20, 520))
         self.penaltyInput = wx.TextCtrl(self, pos=(300, 520), size = (300, 20))
+
+        self.robotCommentsTitle = wx.StaticText(self, label="What do you think this robot is the best at (select mulitple if necessary)?", pos=(20, 540))
+        self.isRobotScale = wx.CheckBox(self, label="Scale", pos=(20, 560))
+        self.isRobotSwitch = wx.CheckBox(self, label="Switch", pos=(100, 560))
+        self.isRobotClimb = wx.CheckBox(self, label="Climb", pos=(180, 560))
+        self.isRobotExchange = wx.CheckBox(self, label="Exchange", pos=(260, 560))
+        self.isRobotHelpingOthers = wx.CheckBox(self, label="Helping others climb", pos=(340, 560))
+        self.isRobotOthers = wx.CheckBox(self, label="Others", pos=(500, 560))
+        self.isRobotOthersInput = wx.TextCtrl(self, pos=(570, 560), size=(150, 20))
+
+
 
 
         self.submitButton = wx.Button(self, 10, "Submit Match Data!", pos=(600,700))
@@ -137,12 +156,12 @@ class Panel(wx.Panel):
         self.teleOpExchangeInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
         self.teleOpOppoSwitchInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
         self.teleOpOppoSwitchInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
-        self.teleOpFromExchangeInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
-        self.teleOpFromExchangeInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
-        self.teleOpFromPlatformInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
-        self.teleOpFromPlatformInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
-        self.teleOpFromPowerCubeInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
-        self.teleOpFromPowerCubeInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
+        # self.teleOpFromExchangeInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
+        # self.teleOpFromExchangeInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
+        # self.teleOpFromPlatformInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
+        # self.teleOpFromPlatformInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
+        # self.teleOpFromPowerCubeInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
+        # self.teleOpFromPowerCubeInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
 
         self.submitButton.Bind(wx.EVT_BUTTON, self.CSV_OUTPUT)
 
@@ -160,14 +179,62 @@ class Panel(wx.Panel):
             eval("self."+textName+"Input").AppendText(str(num - 1))
 
     def CSV_OUTPUT(self, event):
-        with open('entry.csv', 'w') as csvfile:
-            fieldnames = ['name','matchNumber','teamNumber','baseline','autonSwitch','autonScale','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','teleopFromExchange','teleopFromPZ','teleopFromPCZ','robotOnPlatform','robotClimb','buddyBar','strategies','penalties']
+        filename = self.nameInput.GetValue() + "_match" + self.matchNumInput.GetValue() + "_team" + self.teamNumInput.GetValue()
+
+        robot = ""
+        if self.isRobotScale.GetValue():
+            robot += "Scale, "
+        if self.isRobotSwitch.GetValue():
+            robot += "Switch, "
+        if self.isRobotClimb.GetValue():
+            robot += "Climb, "
+        if self.isRobotExchange.GetValue():
+            robot += "Exchange, "
+        if self.isRobotHelpingOthers.GetValue():
+            robot += "HelpingOtherClimb, "
+        if self.isRobotOthers.GetValue():
+            robot += self.isRobotOthersInput.GetValue()
+
+        if robot.endswith(", "):
+            robot = robot.replace(", ", "")
+
+        with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
+            fieldnames = ['name','matchNumber','teamNumber','baseline','autonSwitch','autonScale','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties','robotDescription']
 
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
             writer.writeheader()
-            writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':self.teamNumInput.GetValue(), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'teleopFromExchange':self.teleOpFromExchangeInput.GetValue(), 'teleopFromPZ':self.teleOpFromPlatformInput.GetValue(), 'teleopFromPCZ':self.teleOpFromPowerCubeInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue()})
+            writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':self.teamNumInput.GetValue(), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'robotDescription':robot})
 
+        #Resets
+        # self.nameInput.Clear()
+        self.matchNumInput.Clear()
+        self.teamNumInput.Clear()
+        self.autonSwitchInput.SetValue("0")
+        self.autonScaleInput.SetValue("0")
+        self.autonPlatformInput.SetValue("0")
+        self.autonPowerCubeInput.SetValue("0")
+        self.autonExchangeInput.SetValue("0")
+        self.teleOpSwitchInput.SetValue("0")
+        self.teleOpScaleInput.SetValue("0")
+        self.teleOpExchangeInput.SetValue("0")
+        self.teleOpOppoSwitchInput.SetValue("0")
+        self.teleOpParked.SetSelection(0)
+        self.teleOpClimbed.SetSelection(0)
+        self.teleOpTeamwork.SetSelection(0)
+        self.strategyInput.Clear()
+        self.penaltyInput.Clear()
+        self.isRobotScale.SetValue(0)
+        self.isRobotSwitch.SetValue(0)
+        self.isRobotClimb.SetValue(0)
+        self.isRobotExchange.SetValue(0)
+        self.isRobotHelpingOthers.SetValue(0)
+        self.isRobotOthers.SetValue(0)
+        self.isRobotOthersInput.Clear()
+
+        print filename
+        print myPath + "/ScoutingData" + filename
+        os.system("open -a /Applications/Utilities/Bluetooth\ File\ Exchange.app " + myPath + "/ScoutingData/" + filename + ".csv")
 
 app = wx.App(False)
 frame = wx.Frame(None, title = "1218 Vulcan Scouting 2018 - Scouts Input", size = (800, 800))
