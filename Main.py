@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
+#This is the UI page for scout input
 import wx
 import csv
 import os
 import module_locator
-
+import json
+import requests
 
 #locate the Package
 myPath = module_locator.module_path()
 
+#import match schedule from py
+matchSchedule = json.load(open(myPath + "/matchSchedule.json","r"))
+# print matchSchedule[0]["alliances"]["red"]["team_keys"]
 
 class Panel(wx.Panel):
     global autonSwitch
@@ -21,7 +26,7 @@ class Panel(wx.Panel):
         self.teamNumTitle = wx.StaticText(self, label="Team #", pos=(350, 50))
         self.nameInput = wx.TextCtrl(self, pos=(120, 30), size = (100, 20))
         self.matchNumInput = wx.TextCtrl(self, pos=(120, 50), size = (100, 20))
-        self.teamNumInput = wx.ComboBox(self, pos=(450, 50), size = (100, 20))
+        self.teamNumInput = wx.ComboBox(self, pos=(450, 50), size = (100, 25), style=wx.CB_DROPDOWN)
 
         #Autons
         self.autonTitle = wx.StaticText(self, label="Auton", pos=(20, 100))
@@ -131,12 +136,10 @@ class Panel(wx.Panel):
         self.isRobotOthers = wx.CheckBox(self, label="Others", pos=(500, 560))
         self.isRobotOthersInput = wx.TextCtrl(self, pos=(570, 560), size=(150, 20))
 
-
-
-
         self.submitButton = wx.Button(self, 10, "Submit Match Data!", pos=(600,700))
 
 
+        self.matchNumInput.Bind(wx.EVT_TEXT, self.Team_Match)
         #Setups
         self.autonSwitchInputUp.Bind(wx.EVT_BUTTON, self.Number_Change)
         self.autonSwitchInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
@@ -164,6 +167,26 @@ class Panel(wx.Panel):
         # self.teleOpFromPowerCubeInputDown.Bind(wx.EVT_BUTTON, self.Number_Change)
 
         self.submitButton.Bind(wx.EVT_BUTTON, self.CSV_OUTPUT)
+
+
+    def Team_Match(self, event):
+        self.teamNumInput.Clear()
+        matchNum = int(self.matchNumInput.GetValue())
+        for i in range(0, len(matchSchedule)):
+            if matchSchedule[i]["comp_level"] == "qm" and matchSchedule[i]["match_number"] == matchNum:
+                redTeam = matchSchedule[i]["alliances"]["red"]["team_keys"]
+                blueTeam = matchSchedule[i]["alliances"]["blue"]["team_keys"]
+        red = 1
+        blue = 1
+        for t in redTeam:
+            t = t.replace("frc", "Red"+str(red)+"  ")
+            self.teamNumInput.Append(t)
+            red += 1
+        for t in blueTeam:
+            t = t.replace("frc", "Blue"+str(blue)+"  ")
+            self.teamNumInput.Append(t)
+            blue += 1
+        # self.teamNumInput.GetChildren()[1].SetBackgroundColour(red)
 
     def Number_Change(self, event):
         btn = event.GetEventObject().GetName()

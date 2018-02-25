@@ -1,3 +1,4 @@
+#This file gets the current directory to the package
 import sys
 import os
 

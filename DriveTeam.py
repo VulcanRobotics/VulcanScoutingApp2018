@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#This file generates the drive team input
 import wx
 import csv
 
