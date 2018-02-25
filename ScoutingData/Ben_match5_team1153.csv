@@ -1,0 +1,2 @@
+name,matchNumber,teamNumber,autonPosition,baseline,autonSwitch,autonScale,autonPZ,autonPCZ,autonExchange,teleopSwitch,teleopScale,teleopExchange,teleopOppoSwitch,robotOnPlatform,robotClimb,buddyBar,strategies,penalties,robotDescription,comments
+Ben,5,1153,Red1,False,0,0,0,0,0,0,0,0,0,0,0,0,,,,aaaaaa
