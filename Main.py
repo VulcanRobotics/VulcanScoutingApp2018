@@ -186,11 +186,11 @@ class Panel(wx.Panel):
         red = 1
         blue = 1
         for t in redTeam:
-            t = t.replace("frc", "Red"+str(red)+"  ")
+            t = t.replace("frc", "Red  ")
             self.teamNumInput.Append(t)
             red += 1
         for t in blueTeam:
-            t = t.replace("frc", "Blue"+str(blue)+"  ")
+            t = t.replace("frc", "Blue  ")
             self.teamNumInput.Append(t)
             blue += 1
         # self.teamNumInput.GetChildren()[1].SetBackgroundColour(red)
@@ -212,9 +212,9 @@ class Panel(wx.Panel):
         teamNum = ""
         print self.teamNumInput.GetValue()
         if self.teamNumInput.GetValue().startswith("R"):
-            teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:6], "")
+            teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:5], "")
         elif self.teamNumInput.GetValue().startswith("B"):
-            teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:7], "")
+            teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:6], "")
 
         filename = self.nameInput.GetValue() + "_match" + self.matchNumInput.GetValue() + "_team" + teamNum
 
@@ -283,7 +283,8 @@ class Panel(wx.Panel):
         self.isRobotHelpingOthers.SetValue(0)
         self.isRobotOthers.SetValue(0)
         self.isRobotOthersInput.Clear()
-
+        self.commentsInput.Clear()
+        self.robotPosition.SetSelection(0)
         # print filename
         # print myPath + "/ScoutingData" + filename
         os.system("open -a /Applications/Utilities/Bluetooth\ File\ Exchange.app " + myPath + "/ScoutingData/" + filename + ".csv")
