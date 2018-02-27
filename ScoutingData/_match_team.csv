@@ -1,0 +1,2 @@
+name,matchNumber,teamNumber,deadRobot,autonPosition,baseline,autonSwitch,autonScale,autonSwitchColor,autonScaleColor,autonPZ,autonPCZ,autonExchange,teleopSwitch,teleopScale,teleopExchange,teleopOppoSwitch,robotOnPlatform,robotClimb,buddyBar,strategies,penalties,robotDescription,comments
+,,,False,Blue3,False,0,0,2,2,0,0,0,0,0,0,0,2,2,2,,,,
