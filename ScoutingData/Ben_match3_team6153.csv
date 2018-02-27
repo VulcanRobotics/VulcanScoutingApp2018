@@ -1,2 +1,0 @@
-name,matchNumber,teamNumber,deadRobot,autonPosition,baseline,autonSwitch,autonScale,autonSwitchColor,autonScaleColor,autonPZ,autonPCZ,autonExchange,teleopSwitch,teleopScale,teleopExchange,teleopOppoSwitch,robotOnPlatform,robotClimb,buddyBar,strategies,penalties,robotDescription,comments
-Ben,3,6153,True,Red3,True,1,2,0,1,1,1,0,1,2,1,2,1,0,2,No,No,"Exchange, HelpingOtherClimb, No",No
