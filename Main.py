@@ -26,12 +26,12 @@ class Panel(wx.Panel):
         #Identifiers
         self.nameTitle = wx.StaticText(self, label="Name", pos=(20, 30))
         self.matchNumTitle = wx.StaticText(self, label="Match #", pos=(20, 50))
-        self.teamNumTitle = wx.StaticText(self, label="Team #", pos=(280, 50))
+        self.teamNumTitle = wx.StaticText(self, label="Team #", pos=(230, 50))
         self.nameInput = wx.TextCtrl(self, pos=(120, 30), size = (100, 20))
         self.matchNumInput = wx.TextCtrl(self, pos=(120, 50), size = (100, 20))
-        self.teamNumInput = wx.ComboBox(self, pos=(350, 50), size = (100, 25), style=wx.CB_DROPDOWN)
-        self.label = wx.StaticText(self, label="Dead robot / no show?", pos=(490,50))
-        self.deadRobot = wx.CheckBox(self, pos=(650, 50))
+        self.teamNumInput = wx.ComboBox(self, pos=(290, 50), size = (100, 25), style=wx.CB_DROPDOWN)
+        self.label = wx.StaticText(self, label="Dead robot / no show?", pos=(230,30))
+        self.deadRobot = wx.CheckBox(self, pos=(380, 30))
 
         #Autons
         self.autonTitle = wx.StaticText(self, label="Auton", pos=(20, 100))
@@ -82,12 +82,14 @@ class Panel(wx.Panel):
         self.autonExchangeInputUp = wx.Button(self, label="+", pos=(350, 217.5), size=(25,25), name="autonExchangeInputUp")
         self.autonExchangeInputDown = wx.Button(self, label="-", pos=(380, 217.5), size=(25,25), name="autonExchangeInputDown")
 
-        self.robotPosition = wx.RadioBox(self, label="Where is the robot's STARTING POSITION?", pos=(420,190), majorDimension = 2, choices=["Red1                         ","Blue1","Red2","Blue2","Red3","Blue3","9"], style = wx.RA_SPECIFY_COLS)
-        self.robotPosition.ShowItem(6, False)
-        self.robotPosition.SetSelection(6)
-        self.switchlabel = wx.StaticText(self, label="Switch Alliance sides", pos=(740, 200))
+        self.title = wx.StaticText(self, label="Where is the robot's STARTING POSITION?", pos=(430,35))
+        self.robotPosition = wx.RadioBox(self, pos=(420,30), majorDimension = 2, choices=["9","9","Red1                         ","Blue1","Red2","Blue2","Red3","Blue3"], style = wx.RA_SPECIFY_COLS)
+        self.robotPosition.ShowItem(0, False)
+        self.robotPosition.ShowItem(1, False)
+        self.robotPosition.SetSelection(1)
+        self.switchlabel = wx.StaticText(self, label="Switch Alliance sides", pos=(650, 60))
         self.switchlabel.Wrap(80)
-        self.redRight = wx.CheckBox(self, pos=(760, 250))
+        self.redRight = wx.CheckBox(self, pos=(690, 95))
 
         #TeleOp
         self.teleOpTitle = wx.StaticText(self, label="TeleOperation", pos=(20, 270))
@@ -225,21 +227,23 @@ class Panel(wx.Panel):
 
     def Red_Right(self, event):
         if self.redRight.GetValue():
-            self.robotPosition.SetItemLabel(0, "Blue1                         ")
-            self.robotPosition.SetItemLabel(1, "Red1")
-            self.robotPosition.SetItemLabel(2, "Blue2")
-            self.robotPosition.SetItemLabel(3, "Red2")
-            self.robotPosition.SetItemLabel(4, "Blue3")
-            self.robotPosition.SetItemLabel(5, "Red3")
-            self.robotPosition.SetItemLabel(6, "9")
+            self.robotPosition.SetItemLabel(2, "Blue1                         ")
+            self.robotPosition.SetItemLabel(3, "Red1")
+            self.robotPosition.SetItemLabel(4, "Blue2")
+            self.robotPosition.SetItemLabel(5, "Red2")
+            self.robotPosition.SetItemLabel(6, "Blue3")
+            self.robotPosition.SetItemLabel(7, "Red3")
+            self.robotPosition.SetItemLabel(0, "9")
+            self.robotPosition.SetItemLabel(1, "9")
         else:
-            self.robotPosition.SetItemLabel(0, "Red1                         ")
-            self.robotPosition.SetItemLabel(1, "Blue1")
-            self.robotPosition.SetItemLabel(2, "Red2")
-            self.robotPosition.SetItemLabel(3, "Blue2")
-            self.robotPosition.SetItemLabel(4, "Red3")
-            self.robotPosition.SetItemLabel(5, "Blue3")
-            self.robotPosition.SetItemLabel(6, "9")
+            self.robotPosition.SetItemLabel(2, "Red1                         ")
+            self.robotPosition.SetItemLabel(3, "Blue1")
+            self.robotPosition.SetItemLabel(4, "Red2")
+            self.robotPosition.SetItemLabel(5, "Blue2")
+            self.robotPosition.SetItemLabel(6, "Red3")
+            self.robotPosition.SetItemLabel(7, "Blue3")
+            self.robotPosition.SetItemLabel(0, "9")
+            self.robotPosition.SetItemLabel(1, "9")
         event.Skip()
 
     def Others_Enable(self, event):
@@ -253,11 +257,16 @@ class Panel(wx.Panel):
     def Switch_Enable(self, event):
         if int(self.autonSwitchInput.GetValue()) > 0:
             self.autonSwitchColor.Enable()
+        else:
+            self.autonSwitchColor.Enable(False)
         event.Skip()
 
     def Scale_Enable(self, event):
         if int(self.autonScaleInput.GetValue()) > 0:
             self.autonScaleColor.Enable()
+        else:
+            self.autonScaleColor.Enable(False)
+
         event.Skip()
 
 
@@ -288,11 +297,17 @@ class Panel(wx.Panel):
             num = int(eval("self."+textName+"Input").GetValue())
             eval("self."+textName+"Input").Clear()
             eval("self."+textName+"Input").AppendText(str(num + 1))
+            if int(eval("self."+textName+"Input").GetValue()) < 0:
+                eval("self."+textName+"Input").Clear()
+                eval("self."+textName+"Input").AppendText("0")
         elif btn.endswith("InputDown"):
             textName = btn.replace("InputDown", "")
             num = int(eval("self."+textName+"Input").GetValue())
             eval("self."+textName+"Input").Clear()
             eval("self."+textName+"Input").AppendText(str(num - 1))
+            if int(eval("self."+textName+"Input").GetValue()) < 0:
+                eval("self."+textName+"Input").Clear()
+                eval("self."+textName+"Input").AppendText("0")
         event.Skip()
 
     def CSV_OUTPUT(self, event):
@@ -374,7 +389,7 @@ class Panel(wx.Panel):
         self.isRobotOthers.SetValue(0)
         self.isRobotOthersInput.Clear()
         self.commentsInput.Clear()
-        self.robotPosition.SetSelection(6)
+        self.robotPosition.SetSelection(0)
         self.autonScaleColor.SetSelection(2)
         self.autonSwitchColor.SetSelection(2)
         self.autonSwitchColor.Enable(False)
