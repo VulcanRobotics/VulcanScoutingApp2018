@@ -4,6 +4,7 @@ import wx
 import csv
 import module_locator
 import json
+import os
 
 #locate the Package
 myPath = module_locator.module_path()
@@ -12,32 +13,46 @@ myPath = module_locator.module_path()
 matchSchedule = json.load(open(myPath + "/matchSchedule.json","r"))
 
 class Panel(wx.Panel):
-    global autonSwitch
-    autonSwitch = 0
     def __init__(self, parent):
         wx.Panel.__init__(self, parent)
 
         #Identifiers
         self.nameTitle = wx.StaticText(self, label="Drive Team Input", pos=(20, 30))
-        self.matchNumTitle = wx.StaticText(self, label="Match #", pos=(20, 80))
-        self.teamNumTitle = wx.StaticText(self, label="Team #", pos=(350, 80))
-        self.matchNumInput = wx.TextCtrl(self, pos=(120, 80), size = (100, 20))
-        self.teamNumInput = wx.ComboBox(self, pos=(450, 80), size = (100, 25), style=wx.CB_DROPDOWN)
+        self.matchNumTitle = wx.StaticText(self, label="Match #", pos=(20, 60))
+        self.teamNumTitle = wx.StaticText(self, label="Team #", pos=(350, 60))
+        self.matchNumInput = wx.TextCtrl(self, pos=(120, 60), size = (100, 20))
+        self.teamNumInput = wx.ComboBox(self, pos=(450, 60), size = (100, 25), style=wx.CB_READONLY)
 
         # self.robotRatingTitle = wx.StaticText(self, label="On a scale 1 to 10, how is this robot?", pos=(20, 120))
-        self.confident = wx.RadioBox(self, label="Is this drive team confident playing on the field?", pos=(20, 120), choices=["1", "2", "3", "4", "5"])
-        self.rules = wx.RadioBox(self, label="Is this drive team reasonably familiar with the game rules?", pos=(20, 180), choices=["1", "2", "3", "4", "5"])
-        self.pressure = wx.RadioBox(self, label="Does this drive team perform well under pressure?", pos=(20, 240), choices=["1", "2", "3", "4", "5"])
+        self.label = wx.StaticText(self, label="Is this drive team confident playing on the field?", pos=(20, 100))
+        self.confident = wx.RadioBox(self, pos=(20, 120), choices=["1", "2", "3", "4", "5"])
+
+        self.label = wx.StaticText(self, label="Is this drive team reasonably familiar with the game rules?", pos=(20, 160))
+        self.rules = wx.RadioBox(self, pos=(20, 180), choices=["1", "2", "3", "4", "5"])
+
+        self.label = wx.StaticText(self, label="Does this drive team perform well under pressure?", pos=(20, 220))
+        self.pressure = wx.RadioBox(self, pos=(20, 240), choices=["1", "2", "3", "4", "5"])
         self.commentsTitle = wx.StaticText(self, label="Any other comments?", pos=(20, 320))
         self.commentsInput = wx.TextCtrl(self, pos=(20,340), size=(400,20))
 
 
-        self.submitButton = wx.Button(self, 10, "Submit Match Data!", pos=(600,700))
+        self.submitButton = wx.Button(self, 10, "Submit Match Data!", pos=(400,400))
+        self.submitButton.Enable(False)
 
 
         #Bindings
         self.matchNumInput.Bind(wx.EVT_TEXT, self.Team_Match)
         self.submitButton.Bind(wx.EVT_BUTTON, self.CSV_OUTPUT)
+        self.matchNumInput.Bind(wx.EVT_TEXT, self.Enable_Submit)
+        # self.teamNumInput.Bind(wx.EVT_TEXT, self.Enable_Submit)
+        self.teamNumInput.Bind(wx.EVT_COMBOBOX, self.Enable_Submit)
+
+    def Enable_Submit(self, event):
+        if self.matchNumInput.GetValue() != "" and self.teamNumInput.GetValue() != "":
+            self.submitButton.Enable()
+        else:
+            self.submitButton.Enable(False)
+        event.Skip()
 
     def Team_Match(self, event):
         self.teamNumInput.Clear()
@@ -57,32 +72,43 @@ class Panel(wx.Panel):
             self.teamNumInput.Append(t)
             blue += 1
         # self.teamNumInput.GetChildren()[1].SetBackgroundColour(red)
+        event.Skip()
 
-    def Number_Change(self, event):
-        btn = event.GetEventObject().GetName()
-        if btn.endswith("InputUp"):
-            textName = btn.replace("InputUp", "")
-            num = int(eval("self."+textName+"Input").GetValue())
-            eval("self."+textName+"Input").Clear()
-            eval("self."+textName+"Input").AppendText(str(num + 1))
-        elif btn.endswith("InputDown"):
-            textName = btn.replace("InputDown", "")
-            num = int(eval("self."+textName+"Input").GetValue())
-            eval("self."+textName+"Input").Clear()
-            eval("self."+textName+"Input").AppendText(str(num - 1))
+
 
     def CSV_OUTPUT(self, event):
-        with open('entry.csv', 'w') as csvfile:
-            fieldnames = ['name','matchNumber','teamNumber','baseline','autonSwitch','autonScale','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','teleopFromExchange','teleopFromPZ','teleopFromPCZ','robotOnPlatform','robotClimb','buddyBar','strategies','penalties']
+        teamNum = ""
+        # print self.teamNumInput.GetValue()
+        if self.teamNumInput.GetValue().startswith("R"):
+            teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:6], "")
+        elif self.teamNumInput.GetValue().startswith("B"):
+            teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:7], "")
+
+        filename = "DRIVETEAM" + "_match" + self.matchNumInput.GetValue() + "_team" + teamNum
+
+        with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
+            fieldnames = ['name','matchNumber','teamNumber','confidenceRating','rulesRating','pressureRating','comments']
 
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
             writer.writeheader()
-            writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':self.teamNumInput.GetValue(), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'teleopFromExchange':self.teleOpFromExchangeInput.GetValue(), 'teleopFromPZ':self.teleOpFromPlatformInput.GetValue(), 'teleopFromPCZ':self.teleOpFromPowerCubeInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue()})
+            writer.writerow({'name':"DRIVETEAM",'matchNumber':self.matchNumInput.GetValue(),'teamNumber':teamNum,'confidenceRating':self.confident.GetItemLabel(self.confident.GetSelection()),'rulesRating':self.rules.GetItemLabel(self.rules.GetSelection()),'pressureRating':self.pressure.GetItemLabel(self.pressure.GetSelection()),'comments':self.commentsInput.GetValue()})
+
+        self.matchNumInput.Clear()
+        self.teamNumInput.Clear()
+        self.confident.SetSelection(0)
+        self.rules.SetSelection(0)
+        self.pressure.SetSelection(0)
+        self.commentsInput.Clear()
+
+        os.system("open -a /Applications/Utilities/Bluetooth\ File\ Exchange.app " + myPath + "/ScoutingData/" + filename + ".csv")
+        event.Skip()
+
+
 
 
 app = wx.App(False)
-frame = wx.Frame(None, title = "1218 Vulcan Scouting Drive Team Input", size = (800, 800))
+frame = wx.Frame(None, title = "1218 Vulcan Scouting Drive Team Input", size = (650, 500))
 panel = Panel(frame)
 frame.Show()
 app.MainLoop()

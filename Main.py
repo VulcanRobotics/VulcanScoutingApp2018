@@ -18,45 +18,45 @@ leftColor = "Red"
 rightColor = "Blue"
 
 class Panel(wx.Panel):
-    global autonSwitch
-    autonSwitch = 0
     def __init__(self, parent):
         wx.Panel.__init__(self, parent)
 
+        self.boldFont = wx.Font(18, wx.DEFAULT, wx.BOLD, wx.NORMAL)
         #Identifiers
         self.nameTitle = wx.StaticText(self, label="Name", pos=(20, 30))
         self.matchNumTitle = wx.StaticText(self, label="Match #", pos=(20, 50))
         self.teamNumTitle = wx.StaticText(self, label="Team #", pos=(230, 50))
         self.nameInput = wx.TextCtrl(self, pos=(120, 30), size = (100, 20))
         self.matchNumInput = wx.TextCtrl(self, pos=(120, 50), size = (100, 20))
-        self.teamNumInput = wx.ComboBox(self, pos=(290, 50), size = (100, 25), style=wx.CB_DROPDOWN)
+        self.teamNumInput = wx.ComboBox(self, pos=(290, 50), size = (100, 25), style=wx.CB_READONLY)
         self.label = wx.StaticText(self, label="Dead robot / no show?", pos=(230,30))
         self.deadRobot = wx.CheckBox(self, pos=(380, 30))
 
         #Autons
         self.autonTitle = wx.StaticText(self, label="Auton", pos=(20, 100))
+        self.autonTitle.SetFont(self.boldFont)
 
         self.baselineTitle = wx.StaticText(self, label="Baseline", pos=(20, 120))
         self.baselineInput = wx.CheckBox(self, pos=(100,120))
 
-        self.autonSwitchTitle = wx.StaticText(self, label="Cubes on the Switch", pos=(20, 140))
-        self.autonSwitchInput = wx.TextCtrl(self, pos=(300, 140), size=(30,20))
+        self.autonSwitchTitle = wx.StaticText(self, label="SWITCH Cubes", pos=(20, 140))
+        self.autonSwitchInput = wx.TextCtrl(self, pos=(220, 140), size=(30,20))
         self.autonSwitchInput.AppendText("0")
-        self.autonSwitchInputUp = wx.Button(self, label="+", pos=(350, 137.5), size=(25,25), name="autonSwitchInputUp")
-        self.autonSwitchInputDown = wx.Button(self, label="-", pos=(380, 137.5), size=(25,25), name="autonSwitchInputDown")
+        self.autonSwitchInputUp = wx.Button(self, label="+", pos=(270, 137.5), size=(25,25), name="autonSwitchInputUp")
+        self.autonSwitchInputDown = wx.Button(self, label="-", pos=(300, 137.5), size=(25,25), name="autonSwitchInputDown")
         self.autonSwitchColor = wx.RadioBox(self, pos=(680, 130), choices=["Yes", "No", "9"])
-        self.label = wx.StaticText(self, label="On the correct colored side of the Switch?", pos=(410,140))
+        self.label = wx.StaticText(self, label="CORRECT COLORED SIDE of the SWITCH?", pos=(410,140))
         self.autonSwitchColor.ShowItem(2, False)
         self.autonSwitchColor.SetSelection(2)
         self.autonSwitchColor.Enable(False)
 
 
-        self.autonScaleTitle = wx.StaticText(self, label="Cubes on the Scale", pos=(20, 160))
-        self.autonScaleInput = wx.TextCtrl(self, pos=(300, 160), size=(30,20))
+        self.autonScaleTitle = wx.StaticText(self, label="SCALE Cubes", pos=(20, 160))
+        self.autonScaleInput = wx.TextCtrl(self, pos=(220, 160), size=(30,20))
         self.autonScaleInput.AppendText("0")
-        self.autonScaleInputUp = wx.Button(self, label="+", pos=(350, 157.5), size=(25,25), name="autonScaleInputUp")
-        self.autonScaleInputDown = wx.Button(self, label="-", pos=(380, 157.5), size=(25,25), name="autonScaleInputDown")
-        self.label = wx.StaticText(self, label="On the correct colored side of the Scale?", pos=(410,160))
+        self.autonScaleInputUp = wx.Button(self, label="+", pos=(270, 157.5), size=(25,25), name="autonScaleInputUp")
+        self.autonScaleInputDown = wx.Button(self, label="-", pos=(300, 157.5), size=(25,25), name="autonScaleInputDown")
+        self.label = wx.StaticText(self, label="CORRECT COLORED SIDE of the SCALE?", pos=(410,160))
         self.autonScaleColor = wx.RadioBox(self, pos=(680, 155), choices=["Yes", "No", "9"])
         self.autonScaleColor.ShowItem(2, False)
         self.autonScaleColor.SetSelection(2)
@@ -64,55 +64,56 @@ class Panel(wx.Panel):
 
 
 
-        self.autonPlatformTitle = wx.StaticText(self, label="Cubes got from the Platform Zone", pos=(20, 180))
-        self.autonPlatformInput = wx.TextCtrl(self, pos=(300, 180), size=(30,20))
+        self.autonPlatformTitle = wx.StaticText(self, label="PLATFORM Zone Cubes", pos=(20, 180))
+        self.autonPlatformInput = wx.TextCtrl(self, pos=(220, 180), size=(30,20))
         self.autonPlatformInput.AppendText("0")
-        self.autonPlatformInputUp = wx.Button(self, label="+", pos=(350, 177.5), size=(25,25), name="autonPlatformInputUp")
-        self.autonPlatformInputDown = wx.Button(self, label="-", pos=(380, 177.5), size=(25,25), name="autonPlatformInputDown")
+        self.autonPlatformInputUp = wx.Button(self, label="+", pos=(270, 177.5), size=(25,25), name="autonPlatformInputUp")
+        self.autonPlatformInputDown = wx.Button(self, label="-", pos=(300, 177.5), size=(25,25), name="autonPlatformInputDown")
 
-        self.autonPowerCubeTitle = wx.StaticText(self, label="Cubes got from the Power Cube Zone", pos=(20, 200))
-        self.autonPowerCubeInput = wx.TextCtrl(self, pos=(300, 200), size=(30,20))
+        self.autonPowerCubeTitle = wx.StaticText(self, label="POWER CUBE Zone Cubes", pos=(20, 200))
+        self.autonPowerCubeInput = wx.TextCtrl(self, pos=(220, 200), size=(30,20))
         self.autonPowerCubeInput.AppendText("0")
-        self.autonPowerCubeInputUp = wx.Button(self, label="+", pos=(350, 197.5), size=(25,25), name="autonPowerCubeInputUp")
-        self.autonPowerCubeInputDown = wx.Button(self, label="-", pos=(380, 197.5), size=(25,25), name="autonPowerCubeInputDown")
+        self.autonPowerCubeInputUp = wx.Button(self, label="+", pos=(270, 197.5), size=(25,25), name="autonPowerCubeInputUp")
+        self.autonPowerCubeInputDown = wx.Button(self, label="-", pos=(300, 197.5), size=(25,25), name="autonPowerCubeInputDown")
 
-        self.autonExchangeTitle = wx.StaticText(self, label="Cubes sent to the Exchange", pos=(20, 220))
-        self.autonExchangeInput = wx.TextCtrl(self, pos=(300, 220), size=(30,20))
+        self.autonExchangeTitle = wx.StaticText(self, label="PORTAL Cubes", pos=(20, 220))
+        self.autonExchangeInput = wx.TextCtrl(self, pos=(220, 220), size=(30,20))
         self.autonExchangeInput.AppendText("0")
-        self.autonExchangeInputUp = wx.Button(self, label="+", pos=(350, 217.5), size=(25,25), name="autonExchangeInputUp")
-        self.autonExchangeInputDown = wx.Button(self, label="-", pos=(380, 217.5), size=(25,25), name="autonExchangeInputDown")
+        self.autonExchangeInputUp = wx.Button(self, label="+", pos=(270, 217.5), size=(25,25), name="autonExchangeInputUp")
+        self.autonExchangeInputDown = wx.Button(self, label="-", pos=(300, 217.5), size=(25,25), name="autonExchangeInputDown")
 
         self.title = wx.StaticText(self, label="Where is the robot's STARTING POSITION?", pos=(430,35))
         self.robotPosition = wx.RadioBox(self, pos=(420,30), majorDimension = 2, choices=["9","9","Red1                         ","Blue1","Red2","Blue2","Red3","Blue3"], style = wx.RA_SPECIFY_COLS)
         self.robotPosition.ShowItem(0, False)
         self.robotPosition.ShowItem(1, False)
-        self.robotPosition.SetSelection(1)
+        self.robotPosition.SetSelection(0)
         self.switchlabel = wx.StaticText(self, label="Switch Alliance sides", pos=(650, 60))
         self.switchlabel.Wrap(80)
         self.redRight = wx.CheckBox(self, pos=(690, 95))
 
         #TeleOp
         self.teleOpTitle = wx.StaticText(self, label="TeleOperation", pos=(20, 270))
+        self.teleOpTitle.SetFont(self.boldFont)
 
-        self.teleOpSwitchTitle = wx.StaticText(self, label="Cubes on the Switch", pos=(20, 290))
+        self.teleOpSwitchTitle = wx.StaticText(self, label="SWITCH Cubes", pos=(20, 290))
         self.teleOpSwitchInput = wx.TextCtrl(self, pos=(220, 290), size=(30,20))
         self.teleOpSwitchInput.AppendText("0")
         self.teleOpSwitchInputUp = wx.Button(self, label="+", pos=(270, 287.5), size=(25,25), name="teleOpSwitchInputUp")
         self.teleOpSwitchInputDown = wx.Button(self, label="-", pos=(300, 287.5), size=(25,25), name="teleOpSwitchInputDown")
 
-        self.teleOpScaleTitle = wx.StaticText(self, label="Cubes on the Scale", pos=(20, 310))
+        self.teleOpScaleTitle = wx.StaticText(self, label="SCALE Cubes", pos=(20, 310))
         self.teleOpScaleInput = wx.TextCtrl(self, pos=(220, 310), size=(30,20))
         self.teleOpScaleInput.AppendText("0")
         self.teleOpScaleInputUp = wx.Button(self, label="+", pos=(270, 307.5), size=(25,25), name="teleOpScaleInputUp")
         self.teleOpScaleInputDown = wx.Button(self, label="-", pos=(300, 307.5), size=(25,25), name="teleOpScaleInputDown")
 
-        self.teleOpExchangeTitle = wx.StaticText(self, label="Cubes to the Exchange", pos=(20, 330))
+        self.teleOpExchangeTitle = wx.StaticText(self, label="PORTAL Cubes", pos=(20, 330))
         self.teleOpExchangeInput = wx.TextCtrl(self, pos=(220, 330), size=(30,20))
         self.teleOpExchangeInput.AppendText("0")
         self.teleOpExchangeInputUp = wx.Button(self, label="+", pos=(270, 327.5), size=(25,25), name="teleOpExchangeInputUp")
         self.teleOpExchangeInputDown = wx.Button(self, label="-", pos=(300, 327.5), size=(25,25), name="teleOpExchangeInputDown")
 
-        self.teleOpOppoSwitchTitle = wx.StaticText(self, label="Cubes on opponent's Switch", pos=(20, 350))
+        self.teleOpOppoSwitchTitle = wx.StaticText(self, label="Cubes on OPPONENT's Switch", pos=(20, 350))
         # self.teleOpExchangeTitle.Wrap(200)
         self.teleOpOppoSwitchInput = wx.TextCtrl(self, pos=(220, 350), size=(30,20))
         self.teleOpOppoSwitchInput.AppendText("0")
@@ -213,11 +214,12 @@ class Panel(wx.Panel):
         self.nameInput.Bind(wx.EVT_TEXT, self.Enable_Submit)
         self.matchNumInput.Bind(wx.EVT_TEXT, self.Enable_Submit)
         self.teamNumInput.Bind(wx.EVT_TEXT, self.Enable_Submit)
+        # self.teamNumInput.Bind(wx.EVT_COMBOBOX, self.Enable_Submit)
         self.robotPosition.Bind(wx.EVT_RADIOBOX, self.Enable_Submit)
         self.deadRobot.Bind(wx.EVT_CHECKBOX, self.Enable_Submit)
 
     def Enable_Submit(self, event):
-        if self.nameInput.GetValue() != "" and self.matchNumInput.GetValue() != ""  and self.teamNumInput.GetValue() != "" and self.robotPosition.GetSelection() != 6:
+        if self.nameInput.GetValue() != "" and self.matchNumInput.GetValue() != ""  and self.teamNumInput.GetValue() != "" and self.robotPosition.GetSelection() != 0:
             self.submitButton.Enable()
         elif self.nameInput.GetValue() != "" and self.matchNumInput.GetValue() != "" and self.teamNumInput.GetValue() != "" and self.deadRobot.GetValue():
             self.submitButton.Enable()
