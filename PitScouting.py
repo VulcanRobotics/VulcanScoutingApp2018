@@ -5,6 +5,8 @@ import csv
 import module_locator
 import json
 import os
+from datetime import datetime
+from pathlib2 import Path
 
 #locate the Package
 myPath = module_locator.module_path()
@@ -53,15 +55,25 @@ class Panel(wx.Panel):
 
 
     def CSV_OUTPUT(self, event):
-        filename = "PITSCOUT_team" + self.teamNumInput.GetValue()
+        filename = "PITSCOUT"
 
-        with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
-            fieldnames = ['teamNumber','weight','groundClearance','scale','scaleComments','switch','switchComments','levitateNum', 'levitateComments']
+        if not Path(myPath + "/ScoutingData", filename + '.csv').exists():
+            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
+                fieldnames = ['teamNumber','weight','groundClearance','scale','scaleComments','switch','switchComments','levitateNum', 'levitateComments','timeStamp']
 
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writeheader()
-            writer.writerow({'teamNumber':self.teamNumInput.GetValue(),'weight':self.weightInput.GetValue(),'groundClearance':self.groundClearanceInput.GetValue(),'scale':self.scaleCapable.GetValue(),'scaleComments':self.scaleTextInput.GetValue(),'switch':self.switchCapable.GetValue(),'switchComments':self.switchTextInput.GetValue(),'levitateNum':self.levitateInput.GetSelection(), 'levitateComments':self.levitateHow.GetValue()})
+                writer.writeheader()
+                writer.writerow({'teamNumber':self.teamNumInput.GetValue(),'weight':self.weightInput.GetValue(),'groundClearance':self.groundClearanceInput.GetValue(),'scale':self.scaleCapable.GetValue(),'scaleComments':self.scaleTextInput.GetValue(),'switch':self.switchCapable.GetValue(),'switchComments':self.switchTextInput.GetValue(),'levitateNum':self.levitateInput.GetSelection(), 'levitateComments':self.levitateHow.GetValue(),'timeStamp':datetime.now().time()})
+        else:
+            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'a') as csvfile:
+                fieldnames = ['teamNumber','weight','groundClearance','scale','scaleComments','switch','switchComments','levitateNum', 'levitateComments', 'timeStamp']
+
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+                # writer.writeheader()
+                writer.writerow({'teamNumber':self.teamNumInput.GetValue(),'weight':self.weightInput.GetValue(),'groundClearance':self.groundClearanceInput.GetValue(),'scale':self.scaleCapable.GetValue(),'scaleComments':self.scaleTextInput.GetValue(),'switch':self.switchCapable.GetValue(),'switchComments':self.switchTextInput.GetValue(),'levitateNum':self.levitateInput.GetSelection(), 'levitateComments':self.levitateHow.GetValue(),'timeStamp':datetime.now().time()})
+
 
         self.teamNumInput.Clear()
         self.weightInput.Clear()

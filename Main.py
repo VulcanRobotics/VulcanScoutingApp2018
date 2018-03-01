@@ -359,7 +359,7 @@ class Panel(wx.Panel):
         # elif self.robotPosition.GetSelection() == 5:
         #     robotPosition = rightColor+"3"
         if not Path(myPath + "/ScoutingData", filename + '.csv').exists():
-            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'ab+') as csvfile:
+            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
                 fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties','robotDescription','comments','timeStamp']
 
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)

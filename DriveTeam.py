@@ -5,6 +5,8 @@ import csv
 import module_locator
 import json
 import os
+from pathlib2 import Path
+from datetime import datetime
 
 #locate the Package
 myPath = module_locator.module_path()
@@ -84,15 +86,27 @@ class Panel(wx.Panel):
         elif self.teamNumInput.GetValue().startswith("B"):
             teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:7], "")
 
-        filename = "DRIVETEAM" + "_match" + self.matchNumInput.GetValue() + "_team" + teamNum
+        filename = "DRIVETEAM"
+         # + "_match" + self.matchNumInput.GetValue() + "_team" + teamNum
 
-        with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
-            fieldnames = ['name','matchNumber','teamNumber','confidenceRating','rulesRating','pressureRating','comments']
+        if not Path(myPath + "/ScoutingData", filename + '.csv').exists():
+            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
+                fieldnames = ['name','matchNumber','teamNumber','confidenceRating','rulesRating','pressureRating','comments','timeStamp']
 
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writeheader()
-            writer.writerow({'name':"DRIVETEAM",'matchNumber':self.matchNumInput.GetValue(),'teamNumber':teamNum,'confidenceRating':self.confident.GetItemLabel(self.confident.GetSelection()),'rulesRating':self.rules.GetItemLabel(self.rules.GetSelection()),'pressureRating':self.pressure.GetItemLabel(self.pressure.GetSelection()),'comments':self.commentsInput.GetValue()})
+                writer.writeheader()
+
+                writer.writerow({'name':"DRIVETEAM",'matchNumber':self.matchNumInput.GetValue(),'teamNumber':teamNum,'confidenceRating':self.confident.GetItemLabel(self.confident.GetSelection()),'rulesRating':self.rules.GetItemLabel(self.rules.GetSelection()),'pressureRating':self.pressure.GetItemLabel(self.pressure.GetSelection()),'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
+        else:
+            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'a') as csvfile:
+                fieldnames = ['name','matchNumber','teamNumber','confidenceRating','rulesRating','pressureRating','comments','timeStamp']
+
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+                # writer.writeheader()
+                writer.writerow({'name':"DRIVETEAM",'matchNumber':self.matchNumInput.GetValue(),'teamNumber':teamNum,'confidenceRating':self.confident.GetItemLabel(self.confident.GetSelection()),'rulesRating':self.rules.GetItemLabel(self.rules.GetSelection()),'pressureRating':self.pressure.GetItemLabel(self.pressure.GetSelection()),'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
+
 
         self.matchNumInput.Clear()
         self.teamNumInput.Clear()
