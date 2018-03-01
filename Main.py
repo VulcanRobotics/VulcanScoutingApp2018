@@ -6,6 +6,9 @@ import os
 import module_locator
 import json
 import requests
+from datetime import datetime
+from pathlib2 import Path
+
 
 #locate the Package
 myPath = module_locator.module_path()
@@ -217,6 +220,7 @@ class Panel(wx.Panel):
         # self.teamNumInput.Bind(wx.EVT_COMBOBOX, self.Enable_Submit)
         self.robotPosition.Bind(wx.EVT_RADIOBOX, self.Enable_Submit)
         self.deadRobot.Bind(wx.EVT_CHECKBOX, self.Enable_Submit)
+        self.tick = 0
 
     def Enable_Submit(self, event):
         if self.nameInput.GetValue() != "" and self.matchNumInput.GetValue() != ""  and self.teamNumInput.GetValue() != "" and self.robotPosition.GetSelection() != 0:
@@ -320,7 +324,7 @@ class Panel(wx.Panel):
         elif self.teamNumInput.GetValue().startswith("B"):
             teamNum = self.teamNumInput.GetValue().replace(self.teamNumInput.GetValue()[0:6], "")
 
-        filename = self.nameInput.GetValue() + "_match" + self.matchNumInput.GetValue() + "_team" + teamNum
+        filename = self.nameInput.GetValue()
 
         robot = ""
         if self.isRobotScale.GetValue():
@@ -354,14 +358,21 @@ class Panel(wx.Panel):
         #     robotPosition = rightColor+"2"
         # elif self.robotPosition.GetSelection() == 5:
         #     robotPosition = rightColor+"3"
+        if not Path(myPath + "/ScoutingData", filename + '.csv').exists():
+            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'ab+') as csvfile:
+                fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties','robotDescription','comments','timeStamp']
 
-        with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
-            fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties','robotDescription','comments']
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer.writeheader()
 
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'robotDescription':robot, 'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
+        else:
+            with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'a') as csvfile:
+                fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties','robotDescription','comments','timeStamp']
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-            writer.writeheader()
-            writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'robotDescription':robot, 'comments':self.commentsInput.GetValue()})
+                writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'robotDescription':robot, 'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
+        self.tick += 1
 
         #Resets
         # self.nameInput.Clear()
