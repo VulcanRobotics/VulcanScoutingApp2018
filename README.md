@@ -13,3 +13,5 @@ These instructions will get your copy of the project up and running on your loca
 2. Install wxPython: `pip install -U wxPython`;
 
 3. Install Requests: `pip install requests`;
+
+4. Install pathlib2: `pip install pathlib2`;
