@@ -67,11 +67,11 @@ class Panel(wx.Panel):
 
 
 
-        self.autonPlatformTitle = wx.StaticText(self, label="PLATFORM Zone Cubes", pos=(20, 180))
-        self.autonPlatformInput = wx.TextCtrl(self, pos=(220, 180), size=(30,20))
+        self.autonPlatformTitle = wx.StaticText(self, label="PLATFORM Zone Cubes", pos=(20, 220))
+        self.autonPlatformInput = wx.TextCtrl(self, pos=(220, 220), size=(30,20))
         self.autonPlatformInput.AppendText("0")
-        self.autonPlatformInputUp = wx.Button(self, label="+", pos=(270, 177.5), size=(25,25), name="autonPlatformInputUp")
-        self.autonPlatformInputDown = wx.Button(self, label="-", pos=(300, 177.5), size=(25,25), name="autonPlatformInputDown")
+        self.autonPlatformInputUp = wx.Button(self, label="+", pos=(270, 217.5), size=(25,25), name="autonPlatformInputUp")
+        self.autonPlatformInputDown = wx.Button(self, label="-", pos=(300, 217.5), size=(25,25), name="autonPlatformInputDown")
 
         self.autonPowerCubeTitle = wx.StaticText(self, label="POWER CUBE Zone Cubes", pos=(20, 200))
         self.autonPowerCubeInput = wx.TextCtrl(self, pos=(220, 200), size=(30,20))
@@ -79,14 +79,14 @@ class Panel(wx.Panel):
         self.autonPowerCubeInputUp = wx.Button(self, label="+", pos=(270, 197.5), size=(25,25), name="autonPowerCubeInputUp")
         self.autonPowerCubeInputDown = wx.Button(self, label="-", pos=(300, 197.5), size=(25,25), name="autonPowerCubeInputDown")
 
-        self.autonExchangeTitle = wx.StaticText(self, label="PORTAL Cubes", pos=(20, 220))
-        self.autonExchangeInput = wx.TextCtrl(self, pos=(220, 220), size=(30,20))
+        self.autonExchangeTitle = wx.StaticText(self, label="EXCHANGE Cubes", pos=(20, 180))
+        self.autonExchangeInput = wx.TextCtrl(self, pos=(220, 180), size=(30,20))
         self.autonExchangeInput.AppendText("0")
-        self.autonExchangeInputUp = wx.Button(self, label="+", pos=(270, 217.5), size=(25,25), name="autonExchangeInputUp")
-        self.autonExchangeInputDown = wx.Button(self, label="-", pos=(300, 217.5), size=(25,25), name="autonExchangeInputDown")
+        self.autonExchangeInputUp = wx.Button(self, label="+", pos=(270, 177.5), size=(25,25), name="autonExchangeInputUp")
+        self.autonExchangeInputDown = wx.Button(self, label="-", pos=(300, 177.5), size=(25,25), name="autonExchangeInputDown")
 
         self.title = wx.StaticText(self, label="Where is the robot's STARTING POSITION?", pos=(430,35))
-        self.robotPosition = wx.RadioBox(self, pos=(420,30), majorDimension = 2, choices=["9","9","Red1                         ","Blue1","Red2","Blue2","Red3","Blue3"], style = wx.RA_SPECIFY_COLS)
+        self.robotPosition = wx.RadioBox(self, pos=(420,30), majorDimension = 2, choices=["9","9","Red1                         ","Blue3","Red2","Blue2","Red3","Blue1"], style = wx.RA_SPECIFY_COLS)
         self.robotPosition.ShowItem(0, False)
         self.robotPosition.ShowItem(1, False)
         self.robotPosition.SetSelection(0)
@@ -110,7 +110,7 @@ class Panel(wx.Panel):
         self.teleOpScaleInputUp = wx.Button(self, label="+", pos=(270, 307.5), size=(25,25), name="teleOpScaleInputUp")
         self.teleOpScaleInputDown = wx.Button(self, label="-", pos=(300, 307.5), size=(25,25), name="teleOpScaleInputDown")
 
-        self.teleOpExchangeTitle = wx.StaticText(self, label="PORTAL Cubes", pos=(20, 330))
+        self.teleOpExchangeTitle = wx.StaticText(self, label="EXCHANGE Cubes", pos=(20, 330))
         self.teleOpExchangeInput = wx.TextCtrl(self, pos=(220, 330), size=(30,20))
         self.teleOpExchangeInput.AppendText("0")
         self.teleOpExchangeInputUp = wx.Button(self, label="+", pos=(270, 327.5), size=(25,25), name="teleOpExchangeInputUp")
@@ -234,20 +234,20 @@ class Panel(wx.Panel):
     def Red_Right(self, event):
         if self.redRight.GetValue():
             self.robotPosition.SetItemLabel(2, "Blue1                         ")
-            self.robotPosition.SetItemLabel(3, "Red1")
+            self.robotPosition.SetItemLabel(3, "Red3")
             self.robotPosition.SetItemLabel(4, "Blue2")
             self.robotPosition.SetItemLabel(5, "Red2")
             self.robotPosition.SetItemLabel(6, "Blue3")
-            self.robotPosition.SetItemLabel(7, "Red3")
+            self.robotPosition.SetItemLabel(7, "Red1")
             self.robotPosition.SetItemLabel(0, "9")
             self.robotPosition.SetItemLabel(1, "9")
         else:
             self.robotPosition.SetItemLabel(2, "Red1                         ")
-            self.robotPosition.SetItemLabel(3, "Blue1")
+            self.robotPosition.SetItemLabel(3, "Blue3")
             self.robotPosition.SetItemLabel(4, "Red2")
             self.robotPosition.SetItemLabel(5, "Blue2")
             self.robotPosition.SetItemLabel(6, "Red3")
-            self.robotPosition.SetItemLabel(7, "Blue3")
+            self.robotPosition.SetItemLabel(7, "Blue1")
             self.robotPosition.SetItemLabel(0, "9")
             self.robotPosition.SetItemLabel(1, "9")
         event.Skip()
@@ -326,23 +326,23 @@ class Panel(wx.Panel):
 
         filename = self.nameInput.GetValue()
 
-        robot = ""
-        if self.isRobotScale.GetValue():
-            robot += "Scale, "
-        if self.isRobotSwitch.GetValue():
-            robot += "Switch, "
-        if self.isRobotClimb.GetValue():
-            robot += "Climb, "
-        if self.isRobotExchange.GetValue():
-            robot += "Exchange, "
-        if self.isRobotDefense.GetValue():
-            robot += "Defense, "
-        if self.isRobotHelpingOthers.GetValue():
-            robot += "Helping Others Climb, "
-        if self.isRobotOthers.GetValue():
-            robot += self.isRobotOthersInput.GetValue() + ", "
-
-        robot = robot[:-2]
+        # robot = ""
+        # if self.isRobotScale.GetValue():
+        #     robot += "Scale, "
+        # if self.isRobotSwitch.GetValue():
+        #     robot += "Switch, "
+        # if self.isRobotClimb.GetValue():
+        #     robot += "Climb, "
+        # if self.isRobotExchange.GetValue():
+        #     robot += "Exchange, "
+        # if self.isRobotDefense.GetValue():
+        #     robot += "Defense, "
+        # if self.isRobotHelpingOthers.GetValue():
+        #     robot += "Helping Others Climb, "
+        # if self.isRobotOthers.GetValue():
+        #     robot += self.isRobotOthersInput.GetValue() + ", "
+        #
+        # robot = robot[:-2]
 
         # print self.robotPosition.GetSelection()
         # robotPosition = ""
@@ -360,23 +360,25 @@ class Panel(wx.Panel):
         #     robotPosition = rightColor+"3"
         if not Path(myPath + "/ScoutingData", filename + '.csv').exists():
             with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
-                fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties','robotDescription','comments','timeStamp']
+                fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties', 'scaleBot', 'switchBot', 'climbBot', 'exchangeBot', 'defenseBot', 'helpingOthersClimbBot', 'othersBot', 'comments','timeStamp']
 
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 writer.writeheader()
 
-                writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'robotDescription':robot, 'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
+                writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'scaleBot':self.isRobotScale.GetValue(), 'switchBot':self.isRobotSwitch.GetValue(), 'climbBot':self.isRobotClimb.GetValue(), 'exchangeBot':self.isRobotExchange.GetValue(), 'defenseBot':self.isRobotDefense.GetValue(), 'helpingOthersClimbBot':self.isRobotHelpingOthers.GetValue(), 'othersBot':self.isRobotOthersInput.GetValue(), 'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
         else:
             with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'a') as csvfile:
-                fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties','robotDescription','comments','timeStamp']
+                fieldnames = ['name','matchNumber','teamNumber', 'deadRobot', 'autonPosition','baseline','autonSwitch','autonScale','autonSwitchColor', 'autonScaleColor','autonPZ','autonPCZ','autonExchange','teleopSwitch','teleopScale','teleopExchange','teleopOppoSwitch','robotOnPlatform','robotClimb','buddyBar','strategies','penalties', 'scaleBot', 'switchBot', 'climbBot', 'exchangeBot', 'defenseBot', 'helpingOthersClimbBot', 'othersBot', 'comments','timeStamp']
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-                writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'robotDescription':robot, 'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
+                writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'scaleBot':self.isRobotScale.GetValue(), 'switchBot':self.isRobotSwitch.GetValue(), 'climbBot':self.isRobotClimb.GetValue(), 'exchangeBot':self.isRobotExchange.GetValue(), 'defenseBot':self.isRobotDefense.GetValue(), 'helpingOthersClimbBot':self.isRobotHelpingOthers.GetValue(), 'othersBot':self.isRobotOthersInput.GetValue(), 'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
         self.tick += 1
 
+        matchNum = int(self.matchNumInput.GetValue())
+
         #Resets
-        # self.nameInput.Clear()
         self.matchNumInput.Clear()
+        self.matchNumInput.AppendText(str(matchNum + 1))
         self.teamNumInput.Clear()
         self.baselineInput.SetValue(False)
         self.autonSwitchInput.SetValue("0")
@@ -409,6 +411,24 @@ class Panel(wx.Panel):
         self.autonScaleColor.Enable(False)
         self.isRobotOthersInput.Enable(False)
         self.deadRobot.SetValue(0)
+
+        self.teamNumInput.Clear()
+        matchNum = int(self.matchNumInput.GetValue())
+        for i in range(0, len(matchSchedule)):
+            if matchSchedule[i]["comp_level"] == "qm" and matchSchedule[i]["match_number"] == matchNum:
+                redTeam = matchSchedule[i]["alliances"]["red"]["team_keys"]
+                blueTeam = matchSchedule[i]["alliances"]["blue"]["team_keys"]
+        red = 1
+        blue = 1
+        for t in redTeam:
+            t = t.replace("frc", "Red  ")
+            self.teamNumInput.Append(t)
+            red += 1
+        for t in blueTeam:
+            t = t.replace("frc", "Blue  ")
+            self.teamNumInput.Append(t)
+            blue += 1
+
 
 
         # print filename
