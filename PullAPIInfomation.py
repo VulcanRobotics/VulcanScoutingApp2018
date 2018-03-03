@@ -32,7 +32,6 @@ while True:
     TeamsSimple = TeamsSimpleR.json()
 
 
-
     with open(os.path.join(myPath + "/APIData/TeamStatuses.csv"), 'w') as csvfile:
         headers = ['teamNum', 'matchesPlayed', 'rank', 'win', 'lose', 'tie']
         writer = csv.DictWriter(csvfile, fieldnames=headers)
