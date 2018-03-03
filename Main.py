@@ -220,7 +220,6 @@ class Panel(wx.Panel):
         # self.teamNumInput.Bind(wx.EVT_COMBOBOX, self.Enable_Submit)
         self.robotPosition.Bind(wx.EVT_RADIOBOX, self.Enable_Submit)
         self.deadRobot.Bind(wx.EVT_CHECKBOX, self.Enable_Submit)
-        self.tick = 0
 
     def Enable_Submit(self, event):
         if self.nameInput.GetValue() != "" and self.matchNumInput.GetValue() != ""  and self.teamNumInput.GetValue() != "" and self.robotPosition.GetSelection() != 0:
@@ -372,7 +371,6 @@ class Panel(wx.Panel):
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
                 writer.writerow({'name':self.nameInput.GetValue(), 'matchNumber':self.matchNumInput.GetValue(), 'teamNumber':teamNum, 'deadRobot':self.deadRobot.GetValue(), 'autonPosition':self.robotPosition.GetItemLabel(self.robotPosition.GetSelection()), 'baseline':self.baselineInput.GetValue(), 'autonSwitch':self.autonSwitchInput.GetValue(), 'autonScale':self.autonScaleInput.GetValue(), 'autonSwitchColor':self.autonSwitchColor.GetSelection(), 'autonScaleColor':self.autonScaleColor.GetSelection(), 'autonPZ':self.autonPlatformInput.GetValue(), 'autonPCZ':self.autonPowerCubeInput.GetValue(), 'autonExchange':self.autonExchangeInput.GetValue(), 'teleopSwitch':self.teleOpSwitchInput.GetValue(), 'teleopScale':self.teleOpScaleInput.GetValue(), 'teleopExchange':self.teleOpExchangeInput.GetValue(), 'teleopOppoSwitch':self.teleOpOppoSwitchInput.GetValue(), 'robotOnPlatform':self.teleOpParked.GetSelection(), 'robotClimb':self.teleOpClimbed.GetSelection(), 'buddyBar':self.teleOpTeamwork.GetSelection(), 'strategies':self.strategyInput.GetValue(), 'penalties':self.penaltyInput.GetValue(), 'scaleBot':self.isRobotScale.GetValue(), 'switchBot':self.isRobotSwitch.GetValue(), 'climbBot':self.isRobotClimb.GetValue(), 'exchangeBot':self.isRobotExchange.GetValue(), 'defenseBot':self.isRobotDefense.GetValue(), 'helpingOthersClimbBot':self.isRobotHelpingOthers.GetValue(), 'othersBot':self.isRobotOthersInput.GetValue(), 'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
-        self.tick += 1
 
         matchNum = int(self.matchNumInput.GetValue())
 
