@@ -10,7 +10,6 @@ from oauth2client import tools
 from oauth2client.file import Storage
 
 from apiclient.http import MediaFileUpload
-import Google.Apis.Drive.v3.DriveService.DriveService()
 
 
 #locate the Package
@@ -79,7 +78,7 @@ def main():
 
     file_metadata = {'name': 'My Report', 'mimeType': 'application/vnd.google-apps.spreadsheet'}
     media = MediaFileUpload(myPath+'/APIData/MatchTeams.csv', mimetype='text/csv', resumable=True)
-    file = Google.Apis.Drive.v3.DriveService.DriveService().files().create(body=file_metadata, media_body=media, fields='id').execute()
+    file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
     # print 'File ID: %s' % file.get('id')
 
 if __name__ == '__main__':

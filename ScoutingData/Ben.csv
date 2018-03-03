@@ -1,0 +1,8 @@
+name,matchNumber,teamNumber,deadRobot,autonPosition,baseline,autonSwitch,autonScale,autonSwitchColor,autonScaleColor,autonPZ,autonPCZ,autonExchange,teleopSwitch,teleopScale,teleopExchange,teleopOppoSwitch,robotOnPlatform,robotClimb,buddyBar,strategies,penalties,scaleBot,switchBot,climbBot,exchangeBot,defenseBot,helpingOthersClimbBot,othersBot,comments,timeStamp
+Ben,1,7314,False,Red1                         ,False,0,0,,,0,0,0,0,0,0,0,2,2,2,,,False,False,False,False,False,False,,,00:51:44.698240
+Ben,2,1153,False,Red2,False,0,0,,,0,0,0,0,0,0,0,2,2,2,,,False,False,False,False,False,False,,,00:51:51.466064
+Ben,3,6153,False,Red1                         ,False,0,0,,,0,0,0,0,0,0,0,2,2,2,,,False,False,False,False,False,False,,,00:51:56.786287
+Ben,1,7314,False,Red2,False,0,0,,,0,0,0,0,0,0,0,2,2,2,,,False,False,False,False,False,False,,,00:53:25.366299
+Ben,1,4905,False,Red1                         ,False,0,0,,,0,0,0,0,0,0,0,2,2,2,,,False,False,False,False,False,False,,,00:55:42.785398
+Ben,2,1153,False,Red2,False,0,0,,,0,0,0,0,0,0,0,2,2,2,,,False,False,False,False,False,False,,,00:55:47.280229
+Ben,3,4909,False,Red3,False,0,0,,,0,0,0,0,0,0,0,2,2,2,,,False,False,False,False,False,False,,,00:55:52.435633
