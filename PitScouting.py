@@ -46,33 +46,53 @@ class Panel(wx.Panel):
 
         self.levitate = wx.StaticText(self, label="Can this robot help others Levitate?", pos=(20,180))
         self.levitateInput = wx.RadioBox(self, choices=["0","1","2"], pos=(280,175))
-        self.how = wx.StaticText(self, label="How?", pos=(20, 200))
-        self.levitateHow = wx.TextCtrl(self, pos=(80,200), size=(300,20))
+        self.how = wx.StaticText(self, label="How?", pos=(20, 205))
+        self.levitateHow = wx.RadioBox(self, choices=["Buddy Bar","Platform but I don't climb","Platform and I climb","Others"], pos=(50,200), style = wx.RA_SPECIFY_COLS, majorDimension=2)
+        self.otherInput = wx.TextCtrl(self, pos=(310,227.5), size=(80,20))
+        self.otherInput.Enable(False)
 
-        self.submitButton = wx.Button(self, 10, "Submit Data!", pos=(400,250))
+        self.comments = wx.StaticText(self, label="General comments?", pos=(20,280))
+        self.commentsInput = wx.TextCtrl(self, pos=(150,280), size=(300,20))
+
+        self.submitButton = wx.Button(self, 10, "Submit Data!", pos=(450,300))
 
         self.submitButton.Bind(wx.EVT_BUTTON, self.CSV_OUTPUT)
+        self.levitateHow.Bind(wx.EVT_RADIOBOX, self.Enable_Others)
+
+
+    def Enable_Others(self, event):
+        if self.levitateHow.GetSelection() == 3:
+            self.otherInput.Enable()
+        else:
+            self.otherInput.Enable(False)
 
 
     def CSV_OUTPUT(self, event):
         filename = "PITSCOUT"
 
+        levitateHow = ""
+        if self.levitateHow.GetSelection() == 3:
+            levitateHow = self.otherInput.GetValue()
+        elif self.levitateHow.GetSelection() != 3:
+            levitateHow = self.levitateHow.GetItemLabel(self.levitateHow.GetSelection())
+
+
         if not Path(myPath + "/ScoutingData", filename + '.csv').exists():
             with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'w') as csvfile:
-                fieldnames = ['teamNumber','weight','groundClearance','scale','scaleComments','switch','switchComments','levitateNum', 'levitateComments','timeStamp']
+                fieldnames = ['teamNumber','weight','groundClearance','scale','scaleComments','switch','switchComments','levitateNum', 'levitateComments','comments','timeStamp']
 
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
                 writer.writeheader()
-                writer.writerow({'teamNumber':self.teamNumInput.GetValue(),'weight':self.weightInput.GetValue(),'groundClearance':self.groundClearanceInput.GetValue(),'scale':self.scaleCapable.GetValue(),'scaleComments':self.scaleTextInput.GetValue(),'switch':self.switchCapable.GetValue(),'switchComments':self.switchTextInput.GetValue(),'levitateNum':self.levitateInput.GetSelection(), 'levitateComments':self.levitateHow.GetValue(),'timeStamp':datetime.now().time()})
+                writer.writerow({'teamNumber':self.teamNumInput.GetValue(),'weight':self.weightInput.GetValue(),'groundClearance':self.groundClearanceInput.GetValue(),'scale':self.scaleCapable.GetValue(),'scaleComments':self.scaleTextInput.GetValue(),'switch':self.switchCapable.GetValue(),'switchComments':self.switchTextInput.GetValue(),'levitateNum':self.levitateInput.GetSelection(), 'levitateComments':levitateHow,'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
         else:
             with open(os.path.join(myPath + "/ScoutingData", filename + '.csv'), 'a') as csvfile:
-                fieldnames = ['teamNumber','weight','groundClearance','scale','scaleComments','switch','switchComments','levitateNum', 'levitateComments', 'timeStamp']
+                fieldnames = ['teamNumber','weight','groundClearance','scale','scaleComments','switch','switchComments','levitateNum', 'levitateComments','comments', 'timeStamp']
 
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
                 # writer.writeheader()
-                writer.writerow({'teamNumber':self.teamNumInput.GetValue(),'weight':self.weightInput.GetValue(),'groundClearance':self.groundClearanceInput.GetValue(),'scale':self.scaleCapable.GetValue(),'scaleComments':self.scaleTextInput.GetValue(),'switch':self.switchCapable.GetValue(),'switchComments':self.switchTextInput.GetValue(),'levitateNum':self.levitateInput.GetSelection(), 'levitateComments':self.levitateHow.GetValue(),'timeStamp':datetime.now().time()})
+                writer.writerow({'teamNumber':self.teamNumInput.GetValue(),'weight':self.weightInput.GetValue(),'groundClearance':self.groundClearanceInput.GetValue(),'scale':self.scaleCapable.GetValue(),'scaleComments':self.scaleTextInput.GetValue(),'switch':self.switchCapable.GetValue(),'switchComments':self.switchTextInput.GetValue(),'levitateNum':self.levitateInput.GetSelection(), 'levitateComments':levitateHow,'comments':self.commentsInput.GetValue(),'timeStamp':datetime.now().time()})
 
 
         self.teamNumInput.Clear()
@@ -83,7 +103,10 @@ class Panel(wx.Panel):
         self.switchCapable.SetValue(0)
         self.switchTextInput.Clear()
         self.levitateInput.SetSelection(0)
-        self.levitateHow.Clear()
+        self.levitateHow.SetSelection(0)
+        self.otherInput.Clear()
+        self.otherInput.Enable(False)
+        self.commentsInput.Clear()
 
 
         # os.system("open -a /Applications/Utilities/Bluetooth\ File\ Exchange.app " + myPath + "/ScoutingData/" + filename + ".csv")
