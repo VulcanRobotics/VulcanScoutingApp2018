@@ -43,12 +43,16 @@ class Panel(wx.Panel):
 
         # self.cheesecake = wx.StaticText(self, label="Cheesecake-able?", pos=(20,160))
         # self.cheesecakable = wx.CheckBox(self, pos =(150,160))
+        self.driveTrain = wx.StaticText(self, label="Type of drivetrain?", pos=(20,165))
+        self.driveTrainInput = wx.RadioBox(self, choices=["WestCoast / Tank","Swerve","Other"],pos=(175,160))
+        self.driveTrainOtherInput = wx.TextCtrl(self, pos=(510,166), size=(80,20))
+        self.driveTrainOtherInput.Enable(False)
 
-        self.levitate = wx.StaticText(self, label="Can this robot help others Levitate?", pos=(20,180))
-        self.levitateInput = wx.RadioBox(self, choices=["0","1","2"], pos=(280,175))
-        self.how = wx.StaticText(self, label="How?", pos=(20, 205))
-        self.levitateHow = wx.RadioBox(self, choices=["Buddy Bar","Platform but I don't climb","Platform and I climb","Others"], pos=(50,200), style = wx.RA_SPECIFY_COLS, majorDimension=2)
-        self.otherInput = wx.TextCtrl(self, pos=(310,227.5), size=(80,20))
+        self.levitate = wx.StaticText(self, label="Can this robot help others Levitate?", pos=(20,210))
+        self.levitateInput = wx.RadioBox(self, choices=["0","1","2"], pos=(280,205))
+        self.how = wx.StaticText(self, label="How?", pos=(20, 235))
+        self.levitateHow = wx.RadioBox(self, choices=["Buddy Bar","Platform but I don't climb","Platform and I climb","Others"], pos=(50,230), style = wx.RA_SPECIFY_COLS, majorDimension=2)
+        self.otherInput = wx.TextCtrl(self, pos=(310,257.5), size=(80,20))
         self.otherInput.Enable(False)
 
         self.comments = wx.StaticText(self, label="General comments?", pos=(20,280))
@@ -58,6 +62,7 @@ class Panel(wx.Panel):
 
         self.submitButton.Bind(wx.EVT_BUTTON, self.CSV_OUTPUT)
         self.levitateHow.Bind(wx.EVT_RADIOBOX, self.Enable_Others)
+        self.driveTrainInput.Bind(wx.EVT_RADIOBOX, self.DT_Enable_Others)
 
 
     def Enable_Others(self, event):
@@ -65,6 +70,15 @@ class Panel(wx.Panel):
             self.otherInput.Enable()
         else:
             self.otherInput.Enable(False)
+        event.Skip()
+
+
+    def DT_Enable_Others(self, event):
+        if self.driveTrainInput.GetSelection() == 2:
+            self.driveTrainOtherInput.Enable()
+        else:
+            self.driveTrainOtherInput.Enable(False)
+        event.Skip()
 
 
     def CSV_OUTPUT(self, event):

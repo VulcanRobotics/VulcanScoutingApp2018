@@ -115,7 +115,7 @@ class Panel(wx.Panel):
         self.pressure.SetSelection(0)
         self.commentsInput.Clear()
 
-        os.system("open -a /Applications/Utilities/Bluetooth\ File\ Exchange.app " + myPath + "/ScoutingData/" + filename + ".csv")
+        # os.system("open -a /Applications/Utilities/Bluetooth\ File\ Exchange.app " + myPath + "/ScoutingData/" + filename + ".csv")
         event.Skip()
 
 

@@ -20,7 +20,7 @@ while True:
     BaseURL = "http://www.thebluealliance.com/api/v3"
     auth={"X-TBA-Auth-Key":"dJhYGUW5l6EWDj6ev6h1CcF20VzyFQl6J8dBuVcwnFh8JtJhoP0BeqMnvHcyqM3d"}
 
-    eventKey = "2018week0"
+    eventKey = "2018paphi"
 
     TeamStatusesR = requests.get(BaseURL + "/event/"+ eventKey +"/teams/statuses", auth)
     TeamStatuses = TeamStatusesR.json()

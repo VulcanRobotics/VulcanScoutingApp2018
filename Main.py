@@ -90,7 +90,7 @@ class Panel(wx.Panel):
         self.autonExchangeInputUp = wx.Button(self, label="+", pos=(270, 177.5), size=(25,25), name="autonExchangeInputUp")
         self.autonExchangeInputDown = wx.Button(self, label="-", pos=(300, 177.5), size=(25,25), name="autonExchangeInputDown")
 
-        self.title = wx.StaticText(self, label="Where is the robot's STARTING POSITION?", pos=(430,35))
+        self.title = wx.StaticText(self, label="ROBOT STARTING FIELD POSITION?", pos=(430,35))
         self.robotPosition = wx.RadioBox(self, pos=(420,30), majorDimension = 2, choices=["9","9","Red1                         ","Blue3","Red2","Blue2","Red3","Blue1"], style = wx.RA_SPECIFY_COLS)
         self.robotPosition.ShowItem(0, False)
         self.robotPosition.ShowItem(1, False)
