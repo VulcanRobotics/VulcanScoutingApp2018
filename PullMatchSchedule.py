@@ -17,7 +17,7 @@ myPath = module_locator.module_path()
 BaseURL = "http://www.thebluealliance.com/api/v3"
 auth={"X-TBA-Auth-Key":"dJhYGUW5l6EWDj6ev6h1CcF20VzyFQl6J8dBuVcwnFh8JtJhoP0BeqMnvHcyqM3d"}
 
-eventKey = "2018paphi"
+eventKey = "2018arc"
 
 matchScheduleRequest = requests.get(BaseURL + "/event/"+ eventKey +"/matches/simple", auth)
 matchSchedule = matchScheduleRequest.text

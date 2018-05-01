@@ -1,0 +1,3647 @@
+teamNum,District
+1,Michigan
+4,Others
+8,Others
+11,Mid-Atlantic
+16,Others
+20,Others
+21,Others
+23,New England
+25,Mid-Atlantic
+27,Michigan
+28,Others
+31,Others
+33,Michigan
+34,Others
+41,Mid-Atlantic
+45,Indiana
+48,Others
+51,Michigan
+56,Mid-Atlantic
+58,New England
+59,Others
+60,Others
+61,New England
+63,Others
+66,Michigan
+67,Michigan
+68,Michigan
+69,New England
+70,Michigan
+71,Indiana
+74,Michigan
+75,Mid-Atlantic
+78,New England
+79,Others
+81,Others
+85,Michigan
+86,Others
+87,Mid-Atlantic
+88,New England
+93,Others
+94,Michigan
+95,New England
+97,New England
+100,Others
+101,Others
+102,Mid-Atlantic
+103,Mid-Atlantic
+107,Michigan
+108,Others
+111,Others
+114,Others
+115,Others
+116,Chesapeake
+117,Others
+118,Others
+120,Others
+121,New England
+122,Chesapeake
+123,Michigan
+125,New England
+126,New England
+128,Others
+131,New England
+133,New England
+135,Indiana
+136,Mid-Atlantic
+138,New England
+141,Michigan
+144,Others
+145,Others
+148,Others
+151,New England
+155,New England
+156,Others
+157,New England
+159,Others
+166,New England
+167,Others
+171,Others
+172,New England
+173,New England
+174,Others
+175,New England
+176,New England
+177,New England
+178,New England
+179,Others
+180,Others
+181,New England
+188,Ontario
+190,New England
+191,Others
+192,Others
+193,Mid-Atlantic
+195,New England
+199,Others
+201,Michigan
+203,Mid-Atlantic
+204,Mid-Atlantic
+207,Others
+213,New England
+216,Michigan
+217,Michigan
+219,Mid-Atlantic
+222,Mid-Atlantic
+223,Mid-Atlantic
+224,Mid-Atlantic
+225,Mid-Atlantic
+226,Michigan
+228,New England
+229,Others
+230,New England
+231,Others
+233,Others
+234,Indiana
+236,New England
+237,New England
+238,New England
+240,Michigan
+244,Michigan
+245,Michigan
+246,New England
+247,Michigan
+250,Others
+253,Others
+254,Others
+256,Others
+263,Others
+269,Others
+271,Others
+272,Mid-Atlantic
+279,Others
+280,Michigan
+281,Others
+283,Others
+287,Others
+288,Michigan
+291,Others
+292,Indiana
+293,Mid-Atlantic
+294,Others
+295,Others
+296,Others
+299,Others
+302,Michigan
+303,Mid-Atlantic
+308,Michigan
+313,Michigan
+314,Michigan
+316,Mid-Atlantic
+319,New England
+321,Mid-Atlantic
+322,Michigan
+323,Others
+329,Others
+330,Others
+333,Others
+334,Others
+335,Others
+337,Others
+339,Chesapeake
+340,Others
+341,Mid-Atlantic
+342,Others
+343,Others
+346,Chesapeake
+348,New England
+352,Others
+353,Others
+354,Others
+358,Others
+359,Others
+360,Pacific Northwest
+364,Others
+365,Mid-Atlantic
+368,Others
+369,Others
+371,Others
+378,Others
+379,Others
+383,Others
+384,Chesapeake
+386,Others
+395,Others
+399,Others
+401,Chesapeake
+418,Others
+422,Chesapeake
+423,Mid-Atlantic
+433,Mid-Atlantic
+435,North Carolina
+441,Others
+442,Others
+447,Indiana
+449,Chesapeake
+451,Others
+453,Michigan
+456,Others
+457,Others
+461,Indiana
+467,New England
+468,Michigan
+469,Michigan
+470,Michigan
+484,Mid-Atlantic
+486,Mid-Atlantic
+488,Pacific Northwest
+492,Pacific Northwest
+494,Michigan
+496,Others
+498,Others
+501,New England
+503,Michigan
+509,New England
+514,Others
+522,Others
+525,Others
+527,Others
+533,Others
+537,Others
+538,Others
+539,Chesapeake
+540,Chesapeake
+545,Others
+547,Others
+548,Michigan
+554,Others
+555,Mid-Atlantic
+558,New England
+564,Others
+568,Pacific Northwest
+569,Others
+571,New England
+573,Michigan
+578,Others
+580,Others
+581,Others
+585,Others
+587,North Carolina
+589,Others
+590,Others
+597,Others
+599,Others
+601,Others
+604,Others
+606,Others
+610,Ontario
+611,Chesapeake
+612,Chesapeake
+614,Chesapeake
+617,Chesapeake
+619,Chesapeake
+620,Chesapeake
+623,Chesapeake
+624,Others
+639,Others
+640,Others
+647,Others
+648,Others
+649,Others
+653,Others
+662,Others
+663,New England
+668,Others
+670,Others
+677,Others
+686,Chesapeake
+687,Others
+691,Others
+692,Others
+694,Others
+695,Others
+696,Others
+698,Others
+701,Others
+702,Others
+703,Michigan
+706,Others
+708,Mid-Atlantic
+709,Mid-Atlantic
+714,Mid-Atlantic
+716,New England
+743,Others
+744,Others
+746,Ontario
+747,Mid-Atlantic
+751,Others
+753,Pacific Northwest
+766,Others
+771,Ontario
+772,Ontario
+773,Ontario
+781,Ontario
+801,Others
+806,Others
+810,Others
+811,New England
+812,Others
+815,Michigan
+816,Mid-Atlantic
+818,Michigan
+829,Indiana
+830,Michigan
+832,Peachtree
+834,Mid-Atlantic
+835,Michigan
+836,Chesapeake
+839,New England
+841,Others
+842,Others
+846,Others
+847,Pacific Northwest
+848,Others
+852,Others
+854,Ontario
+857,Michigan
+858,Michigan
+862,Michigan
+865,Ontario
+867,Others
+868,Indiana
+870,Others
+871,Others
+876,Others
+877,Others
+884,Others
+885,New England
+888,Chesapeake
+894,Michigan
+900,North Carolina
+904,Michigan
+907,Ontario
+910,Michigan
+919,Ontario
+930,Others
+931,Others
+932,Others
+935,Others
+937,Others
+938,Others
+945,Others
+948,Pacific Northwest
+949,Pacific Northwest
+955,Pacific Northwest
+957,Pacific Northwest
+967,Others
+968,Others
+971,Others
+972,Others
+973,Others
+977,Chesapeake
+980,Others
+981,Others
+987,Others
+988,Others
+991,Others
+996,Others
+997,Pacific Northwest
+999,New England
+1002,Peachtree
+1011,Others
+1014,Others
+1018,Indiana
+1023,Michigan
+1024,Indiana
+1025,Michigan
+1027,New England
+1038,Others
+1051,Others
+1058,New England
+1065,Others
+1071,New England
+1072,Others
+1073,New England
+1075,Ontario
+1076,Michigan
+1080,Chesapeake
+1085,New England
+1086,Chesapeake
+1089,Mid-Atlantic
+1091,Others
+1094,Others
+1099,New England
+1100,New England
+1102,Peachtree
+1108,Others
+1111,Chesapeake
+1114,Ontario
+1123,Chesapeake
+1124,New England
+1126,Others
+1137,Chesapeake
+1138,Others
+1143,Mid-Atlantic
+1153,New England
+1155,Others
+1156,Others
+1157,Others
+1159,Others
+1160,Others
+1164,Others
+1165,Others
+1168,Mid-Atlantic
+1178,Others
+1188,Michigan
+1189,Michigan
+1197,Others
+1208,Others
+1209,Others
+1212,Others
+1218,Mid-Atlantic
+1225,North Carolina
+1228,Mid-Atlantic
+1230,Others
+1241,Ontario
+1243,Michigan
+1245,Others
+1246,Ontario
+1247,New England
+1248,Others
+1250,Michigan
+1251,Others
+1254,Michigan
+1255,Others
+1257,Mid-Atlantic
+1258,Pacific Northwest
+1259,Others
+1261,Peachtree
+1262,Chesapeake
+1266,Others
+1277,New England
+1279,Mid-Atlantic
+1280,Others
+1285,Ontario
+1287,Others
+1288,Others
+1289,New England
+1290,Others
+1293,Others
+1294,Pacific Northwest
+1296,Others
+1303,Others
+1305,Ontario
+1306,Others
+1307,New England
+1308,Others
+1310,Ontario
+1311,Peachtree
+1317,Others
+1318,Pacific Northwest
+1319,Others
+1322,Michigan
+1323,Others
+1325,Ontario
+1329,Others
+1332,Others
+1334,Ontario
+1339,Others
+1350,New England
+1351,Others
+1359,Pacific Northwest
+1360,Ontario
+1369,Others
+1370,Mid-Atlantic
+1374,Ontario
+1378,Others
+1382,Others
+1388,Others
+1389,Chesapeake
+1391,Mid-Atlantic
+1398,Others
+1403,Mid-Atlantic
+1405,Others
+1410,Others
+1413,Chesapeake
+1414,Peachtree
+1418,Chesapeake
+1421,Others
+1422,Others
+1425,Pacific Northwest
+1432,Pacific Northwest
+1444,Others
+1446,Chesapeake
+1448,Others
+1450,Others
+1452,Others
+1458,Others
+1466,Others
+1468,Others
+1474,New England
+1477,Others
+1481,Michigan
+1482,Others
+1492,Others
+1493,Others
+1495,Mid-Atlantic
+1501,Indiana
+1502,Michigan
+1504,Michigan
+1506,Michigan
+1507,Others
+1510,Pacific Northwest
+1511,Others
+1512,New England
+1515,Others
+1517,New England
+1518,Others
+1519,New England
+1522,Chesapeake
+1523,Others
+1528,Michigan
+1529,Indiana
+1533,North Carolina
+1538,Others
+1539,Others
+1540,Pacific Northwest
+1546,Others
+1551,Others
+1553,Others
+1554,Others
+1555,Indiana
+1557,Others
+1559,Others
+1561,Others
+1566,Others
+1569,Others
+1571,Pacific Northwest
+1572,Others
+1573,Israel
+1574,Israel
+1576,Israel
+1577,Israel
+1580,Israel
+1583,Others
+1584,Others
+1585,Others
+1590,Others
+1591,Others
+1592,Others
+1595,Pacific Northwest
+1596,Michigan
+1598,Chesapeake
+1599,Chesapeake
+1600,Others
+1601,Others
+1610,Chesapeake
+1619,Others
+1622,Others
+1625,Others
+1626,Mid-Atlantic
+1629,Chesapeake
+1633,Others
+1635,Others
+1640,Mid-Atlantic
+1642,Others
+1646,Indiana
+1647,Mid-Atlantic
+1648,Peachtree
+1649,Others
+1657,Israel
+1658,Others
+1660,Others
+1661,Others
+1662,Others
+1665,Others
+1671,Others
+1672,Mid-Atlantic
+1675,Others
+1676,Mid-Atlantic
+1677,Michigan
+1678,Others
+1683,Peachtree
+1684,Michigan
+1690,Israel
+1699,New England
+1700,Others
+1701,Michigan
+1706,Others
+1708,Others
+1710,Others
+1711,Michigan
+1712,Mid-Atlantic
+1714,Others
+1716,Others
+1718,Michigan
+1719,Chesapeake
+1720,Indiana
+1721,New England
+1723,Others
+1726,Others
+1727,Chesapeake
+1729,New England
+1730,Others
+1731,Chesapeake
+1732,Others
+1735,New England
+1736,Others
+1737,Others
+1739,Others
+1740,New England
+1741,Indiana
+1743,Others
+1744,Others
+1745,Others
+1746,Peachtree
+1747,Indiana
+1750,Others
+1751,Others
+1756,Others
+1757,New England
+1758,Others
+1759,Others
+1761,New England
+1763,Others
+1764,Others
+1768,New England
+1769,Others
+1771,Peachtree
+1772,Others
+1775,Others
+1777,Others
+1778,Pacific Northwest
+1781,Others
+1785,Others
+1786,New England
+1787,Others
+1791,Mid-Atlantic
+1792,Others
+1793,Chesapeake
+1795,Peachtree
+1796,Others
+1797,Others
+1799,Others
+1802,Others
+1803,Others
+1806,Others
+1807,Mid-Atlantic
+1810,Others
+1811,Mid-Atlantic
+1816,Others
+1817,Others
+1818,Others
+1825,Others
+1827,Others
+1828,Others
+1831,New England
+1836,Others
+1847,Others
+1860,Others
+1868,Others
+1872,Others
+1876,Others
+1880,Others
+1884,Others
+1885,Chesapeake
+1891,Others
+1895,Chesapeake
+1896,Michigan
+1899,Pacific Northwest
+1902,Others
+1908,Chesapeake
+1912,Others
+1915,Chesapeake
+1918,Michigan
+1922,New England
+1923,Mid-Atlantic
+1927,Others
+1937,Israel
+1939,Others
+1940,Michigan
+1942,Israel
+1943,Israel
+1944,Israel
+1954,Israel
+1965,New England
+1967,Others
+1972,Others
+1973,New England
+1977,Others
+1982,Others
+1983,Pacific Northwest
+1984,Others
+1985,Others
+1986,Others
+1987,Others
+1989,Mid-Atlantic
+1991,New England
+1994,Others
+1997,Others
+2001,Others
+2010,Others
+2013,Ontario
+2016,Mid-Atlantic
+2022,Others
+2027,Others
+2028,Chesapeake
+2035,Others
+2036,Others
+2039,Others
+2040,Others
+2046,Pacific Northwest
+2048,Michigan
+2051,Others
+2052,Others
+2053,Others
+2054,Michigan
+2056,Ontario
+2059,North Carolina
+2062,Others
+2064,New England
+2067,New England
+2068,Chesapeake
+2070,Mid-Atlantic
+2073,Others
+2075,Michigan
+2077,Others
+2078,Others
+2079,New England
+2080,Others
+2081,Others
+2083,Others
+2084,New England
+2085,Others
+2090,Others
+2095,Mid-Atlantic
+2096,Israel
+2102,Others
+2106,Chesapeake
+2122,Others
+2129,Others
+2130,Others
+2135,Others
+2136,Others
+2137,Michigan
+2141,Others
+2143,Others
+2144,Others
+2145,Michigan
+2147,Pacific Northwest
+2148,Pacific Northwest
+2151,Others
+2152,Others
+2158,Others
+2161,Others
+2164,Others
+2165,Others
+2167,Others
+2168,New England
+2169,Others
+2170,New England
+2171,Indiana
+2172,Others
+2175,Others
+2177,Others
+2180,Mid-Atlantic
+2181,Others
+2183,Others
+2186,Chesapeake
+2187,Others
+2190,Others
+2191,Mid-Atlantic
+2194,Others
+2197,Indiana
+2199,Chesapeake
+2200,Ontario
+2202,Others
+2204,Others
+2207,Others
+2212,Israel
+2220,Others
+2221,Others
+2224,Michigan
+2225,Others
+2227,Others
+2228,Others
+2230,Israel
+2231,Israel
+2232,Others
+2234,Mid-Atlantic
+2239,Others
+2240,Others
+2246,Michigan
+2252,Others
+2259,Others
+2261,Others
+2262,New England
+2264,Others
+2265,Others
+2283,Others
+2333,Others
+2335,Others
+2337,Michigan
+2338,Others
+2339,Others
+2340,Others
+2341,Others
+2342,New England
+2344,Others
+2345,Others
+2347,Others
+2352,Others
+2353,Others
+2354,Others
+2357,Others
+2358,Others
+2359,Others
+2363,Chesapeake
+2367,Others
+2370,New England
+2373,Others
+2374,Pacific Northwest
+2375,Others
+2377,Chesapeake
+2383,Others
+2386,Ontario
+2393,Others
+2395,Others
+2398,Others
+2399,Others
+2403,Others
+2404,Others
+2405,Michigan
+2408,Others
+2410,Others
+2411,Pacific Northwest
+2412,Pacific Northwest
+2415,Peachtree
+2421,Chesapeake
+2423,New England
+2424,Others
+2425,Others
+2429,Others
+2437,Others
+2438,Others
+2439,Others
+2441,Others
+2443,Others
+2444,Others
+2445,Others
+2449,Others
+2450,Others
+2451,Others
+2457,Others
+2458,Mid-Atlantic
+2461,Others
+2465,Others
+2468,Others
+2470,Others
+2471,Pacific Northwest
+2472,Others
+2473,Others
+2474,Michigan
+2477,Others
+2478,Others
+2480,Others
+2481,Others
+2484,Others
+2485,Others
+2486,Others
+2487,Others
+2489,Others
+2491,Others
+2493,Others
+2495,Mid-Atlantic
+2496,Others
+2498,Others
+2499,Others
+2500,Others
+2501,Others
+2502,Others
+2503,Others
+2506,Others
+2508,Others
+2509,Others
+2511,Others
+2512,Others
+2513,Others
+2515,Others
+2518,Others
+2521,Pacific Northwest
+2522,Pacific Northwest
+2523,New England
+2525,Others
+2526,Others
+2529,Others
+2530,Others
+2531,Others
+2532,Others
+2534,Chesapeake
+2537,Chesapeake
+2538,Others
+2539,Mid-Atlantic
+2543,Others
+2544,Others
+2545,Others
+2549,Others
+2550,Pacific Northwest
+2551,Others
+2554,Mid-Atlantic
+2556,Others
+2557,Pacific Northwest
+2559,Mid-Atlantic
+2560,Others
+2574,Others
+2576,Others
+2577,Mid-Atlantic
+2579,Others
+2582,Others
+2583,Others
+2584,Others
+2585,Others
+2586,Michigan
+2587,Others
+2590,Mid-Atlantic
+2591,Michigan
+2594,Others
+2600,Mid-Atlantic
+2601,Others
+2603,Others
+2604,Michigan
+2605,Pacific Northwest
+2606,Others
+2607,Mid-Atlantic
+2609,Ontario
+2611,Michigan
+2612,Michigan
+2613,Others
+2614,Others
+2619,Michigan
+2620,Michigan
+2626,Others
+2630,Israel
+2634,Ontario
+2635,Pacific Northwest
+2637,Others
+2638,Others
+2640,North Carolina
+2641,Others
+2642,North Carolina
+2643,Others
+2647,Others
+2648,New England
+2654,Others
+2655,North Carolina
+2656,Others
+2657,Others
+2658,Others
+2659,Others
+2662,Others
+2667,Others
+2673,Michigan
+2676,Michigan
+2679,Israel
+2682,North Carolina
+2702,Ontario
+2704,Others
+2706,Ontario
+2707,Others
+2708,Ontario
+2709,Others
+2710,Others
+2713,New England
+2721,Others
+2723,Others
+2725,Others
+2729,Mid-Atlantic
+2733,Pacific Northwest
+2765,Others
+2767,Michigan
+2771,Michigan
+2773,Others
+2783,Others
+2785,New England
+2789,Others
+2791,Others
+2795,Others
+2797,Others
+2805,Others
+2811,Pacific Northwest
+2813,Others
+2815,Others
+2819,Chesapeake
+2823,Others
+2825,Others
+2826,Others
+2827,Others
+2830,Others
+2832,Michigan
+2834,Michigan
+2836,New England
+2839,Others
+2840,Others
+2844,Others
+2846,Others
+2847,Others
+2848,Others
+2849,Chesapeake
+2851,Michigan
+2852,Ontario
+2853,Others
+2854,Others
+2855,Others
+2856,Others
+2861,Others
+2867,Indiana
+2869,Others
+2872,Others
+2874,Others
+2875,Others
+2876,New England
+2877,New England
+2879,Others
+2881,Others
+2882,Others
+2883,Others
+2890,Chesapeake
+2895,Others
+2896,Others
+2897,Others
+2898,Pacific Northwest
+2900,Chesapeake
+2903,Pacific Northwest
+2905,Others
+2906,Pacific Northwest
+2907,Pacific Northwest
+2910,Pacific Northwest
+2912,Chesapeake
+2914,Chesapeake
+2915,Pacific Northwest
+2916,Others
+2926,Pacific Northwest
+2927,Pacific Northwest
+2928,Pacific Northwest
+2929,Pacific Northwest
+2930,Pacific Northwest
+2935,Ontario
+2942,Pacific Northwest
+2944,Pacific Northwest
+2945,Others
+2950,Others
+2957,Others
+2959,Michigan
+2960,Michigan
+2961,Chesapeake
+2964,Chesapeake
+2966,Others
+2969,Others
+2972,Others
+2973,Others
+2974,Peachtree
+2976,Pacific Northwest
+2977,Others
+2978,Others
+2980,Pacific Northwest
+2984,Others
+2986,Others
+2987,Others
+2988,Chesapeake
+2989,Others
+2990,Pacific Northwest
+2992,Others
+2993,Others
+2994,Ontario
+2996,Others
+2998,Chesapeake
+3000,Others
+3003,Others
+3004,Others
+3005,Others
+3006,Others
+3007,Others
+3008,Others
+3009,Others
+3010,Others
+3011,Others
+3013,Others
+3015,Others
+3017,Others
+3018,Others
+3019,Others
+3021,Others
+3023,Others
+3024,Pacific Northwest
+3026,Others
+3028,Others
+3029,Others
+3034,Israel
+3035,Others
+3036,Others
+3037,Others
+3038,Others
+3039,Others
+3042,Others
+3043,Others
+3044,Others
+3045,Others
+3049,Pacific Northwest
+3054,Others
+3055,Others
+3058,Others
+3061,Others
+3062,Others
+3065,Israel
+3067,Others
+3070,Pacific Northwest
+3072,Chesapeake
+3075,Israel
+3081,Others
+3082,Others
+3083,Israel
+3090,Others
+3091,Peachtree
+3096,Michigan
+3098,Michigan
+3100,Others
+3102,Others
+3103,Others
+3104,New England
+3110,Others
+3117,Others
+3120,Others
+3122,Others
+3128,Others
+3130,Others
+3131,Pacific Northwest
+3132,Others
+3133,Others
+3134,Others
+3136,Chesapeake
+3137,Others
+3138,Others
+3139,Others
+3140,Others
+3142,Mid-Atlantic
+3145,Others
+3146,New England
+3147,Indiana
+3151,Mid-Atlantic
+3152,Others
+3157,Others
+3158,Others
+3160,Others
+3161,Ontario
+3163,Others
+3164,Others
+3166,Others
+3171,Others
+3172,Others
+3173,Others
+3175,Michigan
+3176,Indiana
+3179,Others
+3180,Indiana
+3181,Others
+3182,New England
+3184,Others
+3187,Others
+3189,Others
+3193,Others
+3196,North Carolina
+3197,Others
+3200,Others
+3201,Others
+3202,Others
+3204,Others
+3205,New England
+3206,Others
+3211,Israel
+3212,Others
+3215,North Carolina
+3216,Others
+3218,Pacific Northwest
+3219,Pacific Northwest
+3220,Pacific Northwest
+3223,Pacific Northwest
+3225,Others
+3229,North Carolina
+3230,Others
+3234,Michigan
+3236,New England
+3237,Pacific Northwest
+3238,Pacific Northwest
+3239,Others
+3240,Others
+3242,Others
+3243,Others
+3244,Others
+3245,Others
+3247,Others
+3250,Others
+3255,Others
+3256,Others
+3257,Others
+3258,Chesapeake
+3260,Others
+3265,Peachtree
+3266,Others
+3267,Others
+3268,Pacific Northwest
+3274,Chesapeake
+3275,Others
+3276,Others
+3277,Others
+3278,Others
+3282,Others
+3284,Others
+3288,Others
+3289,Others
+3291,Others
+3292,Others
+3293,Others
+3294,Others
+3295,Others
+3297,Others
+3298,Others
+3299,Others
+3300,Others
+3302,Michigan
+3303,Others
+3309,Others
+3310,Others
+3313,Others
+3314,Mid-Atlantic
+3316,Israel
+3319,Others
+3322,Michigan
+3323,New England
+3324,Others
+3328,Others
+3329,Peachtree
+3330,Others
+3335,Others
+3336,North Carolina
+3337,Others
+3339,Israel
+3340,Mid-Atlantic
+3341,Others
+3344,Peachtree
+3345,Others
+3352,Others
+3354,Others
+3355,Others
+3357,Michigan
+3359,Chesapeake
+3360,Others
+3361,Chesapeake
+3366,Others
+3367,Others
+3370,Others
+3373,Chesapeake
+3374,Others
+3379,Others
+3381,Others
+3386,Others
+3387,Others
+3388,Israel
+3389,Chesapeake
+3390,Others
+3393,Pacific Northwest
+3397,Others
+3398,Michigan
+3402,North Carolina
+3405,Others
+3407,Others
+3408,Others
+3410,Others
+3414,Michigan
+3418,Others
+3419,Others
+3451,New England
+3452,Michigan
+3453,Others
+3454,Others
+3455,Chesapeake
+3457,Others
+3458,Michigan
+3459,North Carolina
+3461,New England
+3464,New England
+3465,Others
+3466,New England
+3467,New England
+3468,Others
+3470,Others
+3472,Others
+3473,Others
+3476,Others
+3478,Others
+3480,Others
+3481,Others
+3482,Others
+3484,Others
+3487,Indiana
+3488,Others
+3489,Others
+3490,Others
+3491,Others
+3492,Others
+3494,Indiana
+3495,Others
+3498,Others
+3499,New England
+3501,Others
+3504,Others
+3506,North Carolina
+3507,Others
+3510,Others
+3511,Others
+3512,Others
+3513,Others
+3515,Mid-Atlantic
+3522,Others
+3525,New England
+3526,Others
+3527,Others
+3532,Others
+3533,Others
+3534,Michigan
+3535,Michigan
+3536,Michigan
+3537,Michigan
+3538,Michigan
+3539,Michigan
+3542,Michigan
+3543,Ontario
+3544,Others
+3545,Others
+3546,Michigan
+3547,Michigan
+3550,Others
+3555,New England
+3556,Others
+3559,Indiana
+3560,Ontario
+3562,Others
+3566,New England
+3568,Michigan
+3570,Michigan
+3571,Ontario
+3572,Michigan
+3573,Peachtree
+3574,Pacific Northwest
+3575,Pacific Northwest
+3577,Others
+3581,Peachtree
+3586,Pacific Northwest
+3588,Pacific Northwest
+3591,Others
+3593,Others
+3596,Others
+3597,New England
+3598,Others
+3602,Michigan
+3603,Michigan
+3604,Michigan
+3606,Others
+3609,New England
+3610,Others
+3612,Others
+3615,Others
+3616,Others
+3617,Michigan
+3618,Michigan
+3619,Michigan
+3620,Michigan
+3623,New England
+3624,Others
+3627,Others
+3630,Others
+3632,Michigan
+3633,Others
+3634,New England
+3635,Peachtree
+3636,Pacific Northwest
+3637,Mid-Atlantic
+3641,Michigan
+3646,Others
+3647,Others
+3648,Others
+3650,Chesapeake
+3651,Others
+3653,Others
+3654,New England
+3655,Michigan
+3656,Michigan
+3658,Michigan
+3660,Others
+3661,North Carolina
+3663,Pacific Northwest
+3667,Michigan
+3668,Michigan
+3669,Others
+3673,Pacific Northwest
+3674,Pacific Northwest
+3676,Others
+3679,Others
+3680,North Carolina
+3683,Ontario
+3684,Pacific Northwest
+3688,Michigan
+3691,Others
+3692,Others
+3693,Pacific Northwest
+3694,Peachtree
+3695,Others
+3704,Others
+3707,Michigan
+3711,Pacific Northwest
+3712,Pacific Northwest
+3714,Chesapeake
+3719,New England
+3721,Others
+3723,Others
+3728,Others
+3729,Others
+3734,Others
+3735,Others
+3737,North Carolina
+3739,Ontario
+3740,Others
+3743,Others
+3745,Others
+3748,Chesapeake
+3749,Others
+3750,Others
+3751,Others
+3753,Others
+3754,Others
+3755,Others
+3756,Ontario
+3759,Others
+3760,Others
+3767,Michigan
+3770,Michigan
+3773,Michigan
+3777,Others
+3785,Others
+3786,Pacific Northwest
+3792,Others
+3793,Chesapeake
+3794,Others
+3796,North Carolina
+3799,Others
+3800,Others
+3802,Others
+3807,Others
+3812,Pacific Northwest
+3814,Others
+3815,Peachtree
+3821,Others
+3822,North Carolina
+3824,Others
+3826,Pacific Northwest
+3834,Others
+3835,Israel
+3838,Others
+3839,Others
+3840,Others
+3843,Others
+3844,Others
+3845,North Carolina
+3847,Others
+3848,Others
+3851,Others
+3853,Others
+3859,Others
+3863,Others
+3865,Indiana
+3871,Others
+3875,Michigan
+3876,Pacific Northwest
+3878,Others
+3880,Others
+3881,Others
+3882,Others
+3883,Others
+3925,Others
+3926,Others
+3928,Others
+3929,Mid-Atlantic
+3930,New England
+3931,Others
+3932,Others
+3933,Others
+3936,Indiana
+3937,Others
+3939,Chesapeake
+3940,Indiana
+3941,Chesapeake
+3944,Others
+3946,Others
+3947,Indiana
+3950,Others
+3951,Others
+3952,Others
+3953,Others
+3954,Others
+3955,Others
+3957,Others
+3958,New England
+3959,Others
+3965,Others
+3966,Others
+3970,Others
+3974,Mid-Atlantic
+3975,Others
+3976,Others
+3981,Others
+3984,Others
+3985,Others
+3986,Others
+3988,Others
+3990,Others
+3991,Others
+3993,Others
+3996,Others
+3997,Others
+3998,Peachtree
+3999,Others
+4001,Ontario
+4003,Michigan
+4004,Michigan
+4005,Others
+4006,Others
+4008,Indiana
+4009,Others
+4010,Others
+4011,Others
+4012,Others
+4013,Others
+4014,Others
+4015,Ontario
+4019,Others
+4020,Others
+4021,Others
+4023,Others
+4024,Others
+4026,Peachtree
+4027,Others
+4028,Others
+4034,New England
+4035,Mid-Atlantic
+4039,Ontario
+4041,New England
+4042,New England
+4043,Pacific Northwest
+4048,New England
+4049,Others
+4050,Others
+4051,Pacific Northwest
+4053,Others
+4054,Others
+4055,New England
+4056,Others
+4057,Pacific Northwest
+4060,Pacific Northwest
+4061,Pacific Northwest
+4063,Others
+4064,Others
+4065,Others
+4068,Others
+4069,Ontario
+4073,Others
+4074,Others
+4075,Others
+4076,Others
+4077,Pacific Northwest
+4078,Others
+4079,Others
+4080,Peachtree
+4083,Others
+4085,Others
+4087,Others
+4089,Pacific Northwest
+4091,Others
+4093,Others
+4096,Others
+4097,New England
+4099,Chesapeake
+4103,Indiana
+4104,Pacific Northwest
+4107,Others
+4110,Pacific Northwest
+4111,Others
+4112,Peachtree
+4114,Others
+4118,Others
+4119,Others
+4120,Pacific Northwest
+4121,Others
+4122,Others
+4123,Others
+4125,Pacific Northwest
+4127,Pacific Northwest
+4130,Michigan
+4131,Pacific Northwest
+4132,Pacific Northwest
+4135,Others
+4137,Chesapeake
+4139,Others
+4141,Others
+4143,Others
+4145,Others
+4146,Others
+4150,Others
+4151,New England
+4152,Ontario
+4153,Others
+4156,Others
+4159,Others
+4160,Others
+4161,Others
+4166,Others
+4169,New England
+4171,Others
+4173,Pacific Northwest
+4174,Others
+4175,Others
+4176,New England
+4179,Others
+4180,Pacific Northwest
+4181,Others
+4182,Others
+4183,Others
+4186,Others
+4187,Others
+4188,Peachtree
+4189,Peachtree
+4191,Others
+4192,Others
+4193,Peachtree
+4195,Peachtree
+4198,Others
+4201,Others
+4203,Others
+4205,Pacific Northwest
+4206,Others
+4207,Others
+4209,Others
+4212,Others
+4213,Others
+4215,Others
+4216,Michigan
+4217,Others
+4219,Others
+4225,Others
+4226,Others
+4229,Others
+4230,Others
+4232,Others
+4235,Peachtree
+4237,Michigan
+4238,Others
+4239,Others
+4240,Peachtree
+4241,Others
+4242,Chesapeake
+4243,Others
+4246,Others
+4247,Others
+4248,Ontario
+4252,Ontario
+4253,Others
+4255,Others
+4256,Others
+4260,Others
+4262,Others
+4263,Others
+4264,Others
+4265,Others
+4267,Others
+4269,Others
+4270,Others
+4272,Indiana
+4276,Others
+4277,Others
+4281,Mid-Atlantic
+4283,Others
+4284,Others
+4285,Mid-Atlantic
+4286,Chesapeake
+4290,North Carolina
+4291,North Carolina
+4292,Others
+4293,Others
+4295,Others
+4296,Others
+4299,Others
+4301,Others
+4306,Others
+4308,Ontario
+4309,Pacific Northwest
+4311,New England
+4314,Others
+4319,Israel
+4320,Israel
+4322,Others
+4325,Michigan
+4327,Michigan
+4328,Others
+4329,Others
+4330,Others
+4332,Others
+4334,Others
+4335,Others
+4336,Others
+4337,Michigan
+4338,Israel
+4342,Mid-Atlantic
+4343,Ontario
+4348,Others
+4353,Others
+4355,Others
+4356,Others
+4360,Others
+4361,Mid-Atlantic
+4362,Michigan
+4364,Others
+4371,Others
+4373,Mid-Atlantic
+4375,Michigan
+4376,Michigan
+4377,Michigan
+4378,Others
+4380,Michigan
+4381,Michigan
+4382,Michigan
+4383,Others
+4384,Michigan
+4386,Others
+4388,Others
+4390,Michigan
+4391,Michigan
+4392,Michigan
+4395,Michigan
+4397,Others
+4398,Michigan
+4400,Others
+4401,Others
+4403,Others
+4405,Michigan
+4408,Michigan
+4409,Michigan
+4412,Others
+4415,Others
+4416,Israel
+4418,Others
+4450,Pacific Northwest
+4451,Others
+4453,Michigan
+4454,Mid-Atlantic
+4455,Others
+4456,Chesapeake
+4458,Others
+4459,Peachtree
+4461,Pacific Northwest
+4462,Others
+4464,Chesapeake
+4466,Chesapeake
+4467,Others
+4468,Peachtree
+4469,Pacific Northwest
+4470,Others
+4471,Others
+4472,Chesapeake
+4473,New England
+4476,Ontario
+4480,Others
+4481,Others
+4482,Michigan
+4485,Indiana
+4486,Others
+4488,Pacific Northwest
+4495,Pacific Northwest
+4496,Others
+4499,Others
+4500,Others
+4501,Others
+4504,Others
+4505,Chesapeake
+4506,Others
+4508,Others
+4509,Peachtree
+4511,Others
+4512,Pacific Northwest
+4513,Pacific Northwest
+4514,Chesapeake
+4516,Peachtree
+4519,Ontario
+4521,Others
+4522,Others
+4523,Others
+4525,Ontario
+4528,Others
+4531,Others
+4533,Others
+4534,North Carolina
+4536,Others
+4537,Others
+4539,Others
+4541,Chesapeake
+4546,New England
+4547,Others
+4549,Others
+4550,Others
+4555,New England
+4557,New England
+4561,North Carolina
+4562,Others
+4564,New England
+4565,Others
+4567,Others
+4568,Michigan
+4571,Others
+4572,New England
+4573,Mid-Atlantic
+4575,Mid-Atlantic
+4576,Others
+4578,Others
+4579,Pacific Northwest
+4580,Indiana
+4582,Others
+4583,Others
+4584,Others
+4585,Others
+4586,Israel
+4587,Others
+4590,Israel
+4592,Others
+4593,Others
+4594,Others
+4595,Ontario
+4597,Others
+4598,Others
+4600,Others
+4601,Others
+4603,Others
+4604,Others
+4607,Others
+4608,Pacific Northwest
+4610,Others
+4611,Others
+4613,Others
+4614,Others
+4616,Others
+4618,Ontario
+4619,Others
+4622,Others
+4623,Others
+4624,Others
+4625,Others
+4626,Others
+4627,Others
+4630,Others
+4632,Others
+4635,Others
+4637,Mid-Atlantic
+4638,Chesapeake
+4639,Others
+4640,Others
+4641,Others
+4643,Others
+4645,Others
+4646,Others
+4648,Others
+4649,Israel
+4652,Pacific Northwest
+4653,Mid-Atlantic
+4655,Others
+4656,Others
+4661,Israel
+4662,Pacific Northwest
+4663,Others
+4664,Others
+4665,Others
+4669,Others
+4674,Others
+4678,Ontario
+4680,Michigan
+4681,Pacific Northwest
+4682,Pacific Northwest
+4683,Pacific Northwest
+4688,Ontario
+4692,Pacific Northwest
+4693,Others
+4694,Others
+4698,Others
+4701,Peachtree
+4702,Others
+4704,Ontario
+4707,Others
+4711,Others
+4715,Michigan
+4717,Others
+4723,Others
+4726,Pacific Northwest
+4728,Others
+4729,Others
+4730,Peachtree
+4731,Others
+4733,Others
+4734,Others
+4735,Others
+4737,Michigan
+4738,Others
+4739,Others
+4740,Others
+4741,Others
+4744,Israel
+4746,Others
+4748,Others
+4749,Peachtree
+4750,Mid-Atlantic
+4757,Israel
+4758,Michigan
+4761,New England
+4762,Others
+4763,Others
+4764,Others
+4765,Others
+4767,North Carolina
+4768,Michigan
+4769,Others
+4773,Others
+4774,Others
+4775,Others
+4776,Michigan
+4777,Ontario
+4778,Others
+4779,Michigan
+4780,Others
+4782,Others
+4783,Ontario
+4784,Israel
+4786,Others
+4787,Others
+4792,Others
+4795,North Carolina
+4796,New England
+4799,Others
+4801,Others
+4802,Others
+4804,Others
+4809,Others
+4810,Michigan
+4811,Michigan
+4814,Ontario
+4815,Michigan
+4816,North Carolina
+4817,Others
+4818,Others
+4819,Michigan
+4821,Chesapeake
+4823,Others
+4827,Michigan
+4828,North Carolina
+4829,North Carolina
+4835,Michigan
+4838,Michigan
+4840,Michigan
+4845,Others
+4847,Others
+4851,Michigan
+4854,Michigan
+4855,Michigan
+4856,Others
+4859,Others
+4902,Ontario
+4903,Ontario
+4904,Others
+4905,New England
+4906,New England
+4907,Ontario
+4908,New England
+4909,New England
+4910,Peachtree
+4911,Pacific Northwest
+4913,Others
+4914,Ontario
+4915,Pacific Northwest
+4917,Ontario
+4918,Pacific Northwest
+4919,Others
+4920,Ontario
+4924,Others
+4925,New England
+4926,Indiana
+4929,New England
+4930,Others
+4931,Others
+4932,Ontario
+4933,Others
+4935,North Carolina
+4936,Ontario
+4938,Ontario
+4939,Ontario
+4940,Ontario
+4941,Peachtree
+4942,Others
+4944,Others
+4946,Ontario
+4947,Others
+4949,Chesapeake
+4950,Others
+4951,Ontario
+4952,Others
+4954,Mid-Atlantic
+4955,Others
+4956,Michigan
+4957,Others
+4958,New England
+4959,Others
+4961,Michigan
+4964,Others
+4965,Others
+4967,Michigan
+4968,Ontario
+4970,Michigan
+4972,Others
+4973,Others
+4976,Ontario
+4978,Others
+4979,Others
+4980,Pacific Northwest
+4982,Indiana
+4983,Michigan
+4984,Others
+4987,New England
+4988,Michigan
+4990,Others
+4991,Others
+4992,Ontario
+4994,Michigan
+4998,Michigan
+4999,Others
+5000,New England
+5002,Others
+5003,Others
+5005,Others
+5006,Others
+5010,Indiana
+5012,Others
+5013,Others
+5015,Others
+5016,Others
+5019,Others
+5022,Others
+5024,Ontario
+5025,Others
+5026,Others
+5027,Others
+5030,Others
+5031,Ontario
+5032,Ontario
+5033,Ontario
+5036,Ontario
+5038,Israel
+5039,Ontario
+5041,Others
+5045,Others
+5046,Michigan
+5047,Others
+5048,Michigan
+5049,Others
+5050,Michigan
+5052,Others
+5053,Michigan
+5056,Michigan
+5057,Others
+5058,Others
+5059,Others
+5060,Others
+5063,Others
+5065,Michigan
+5066,Michigan
+5067,Michigan
+5069,Michigan
+5070,Others
+5071,Others
+5072,Michigan
+5074,Peachtree
+5077,Others
+5078,Others
+5082,Others
+5084,Michigan
+5085,Pacific Northwest
+5086,Michigan
+5089,Others
+5090,Michigan
+5093,Others
+5095,Others
+5096,Others
+5098,Others
+5099,Others
+5102,Others
+5103,Others
+5104,Others
+5107,Others
+5109,Peachtree
+5110,Michigan
+5112,New England
+5113,Mid-Atlantic
+5114,Michigan
+5115,Chesapeake
+5118,Others
+5119,Others
+5122,New England
+5123,Others
+5124,Others
+5125,Others
+5126,Others
+5129,New England
+5130,Others
+5132,Peachtree
+5133,Others
+5134,Others
+5135,Israel
+5136,Others
+5137,Others
+5141,Others
+5142,New England
+5143,Others
+5144,Michigan
+5145,Others
+5147,Others
+5148,Others
+5149,Others
+5150,Michigan
+5152,Michigan
+5155,Michigan
+5156,Michigan
+5159,Others
+5160,North Carolina
+5161,Michigan
+5162,Michigan
+5166,Michigan
+5167,Michigan
+5168,Others
+5171,Others
+5172,Others
+5173,Michigan
+5175,Michigan
+5176,Others
+5178,Others
+5179,Others
+5181,Mid-Atlantic
+5182,Michigan
+5183,Michigan
+5186,Others
+5188,Indiana
+5189,Others
+5190,North Carolina
+5193,Michigan
+5194,Michigan
+5196,Others
+5197,Michigan
+5198,Pacific Northwest
+5199,Others
+5200,Others
+5201,Michigan
+5202,Others
+5203,Michigan
+5204,Michigan
+5205,Michigan
+5209,Others
+5212,Others
+5213,Michigan
+5214,Michigan
+5215,Michigan
+5216,Michigan
+5217,Michigan
+5219,Peachtree
+5222,Michigan
+5224,Michigan
+5225,Michigan
+5226,Michigan
+5227,Michigan
+5229,Michigan
+5230,Michigan
+5231,Michigan
+5232,Others
+5234,Michigan
+5235,Michigan
+5238,Michigan
+5239,Michigan
+5241,Others
+5242,Others
+5243,Chesapeake
+5247,Michigan
+5248,Michigan
+5250,Others
+5251,Michigan
+5253,Others
+5254,Others
+5255,Michigan
+5256,Michigan
+5257,Michigan
+5260,Michigan
+5261,Others
+5263,Michigan
+5265,New England
+5268,Others
+5274,Others
+5275,Others
+5276,Others
+5278,Others
+5279,Chesapeake
+5282,Michigan
+5283,Others
+5285,Others
+5288,Ontario
+5290,Others
+5291,Israel
+5293,Peachtree
+5295,Pacific Northwest
+5298,Others
+5299,Others
+5308,Others
+5310,Mid-Atlantic
+5312,Others
+5314,Michigan
+5316,Michigan
+5317,Others
+5324,Ontario
+5326,Others
+5327,Others
+5329,Others
+5331,Others
+5332,Peachtree
+5333,Others
+5338,Chesapeake
+5339,Others
+5340,Others
+5344,Others
+5347,New England
+5348,Others
+5350,Others
+5401,Mid-Atlantic
+5403,Indiana
+5404,Mid-Atlantic
+5406,Ontario
+5407,Mid-Atlantic
+5408,Ontario
+5409,Ontario
+5410,Others
+5411,Others
+5412,Others
+5413,Others
+5414,Others
+5417,Others
+5418,Others
+5419,Others
+5420,Mid-Atlantic
+5421,Others
+5422,New England
+5424,Michigan
+5426,Ontario
+5427,Others
+5428,Ontario
+5429,Others
+5430,Others
+5431,Others
+5434,Others
+5436,Michigan
+5437,Others
+5438,Mid-Atlantic
+5439,Others
+5440,Others
+5442,Others
+5443,Others
+5445,Others
+5447,Michigan
+5448,Michigan
+5449,Others
+5450,Pacific Northwest
+5451,Others
+5453,Others
+5454,Others
+5457,Mid-Atlantic
+5458,Others
+5459,New England
+5460,Michigan
+5461,Others
+5462,Michigan
+5464,Others
+5465,Others
+5467,Michigan
+5468,Pacific Northwest
+5470,Michigan
+5471,New England
+5472,Others
+5473,Michigan
+5474,Others
+5477,Others
+5478,Michigan
+5480,Others
+5482,Peachtree
+5483,Ontario
+5484,Indiana
+5486,Michigan
+5490,Mid-Atlantic
+5491,New England
+5492,Others
+5493,Others
+5494,New England
+5496,Others
+5498,Michigan
+5499,Others
+5500,Others
+5501,Michigan
+5502,Michigan
+5503,Others
+5504,Michigan
+5505,Michigan
+5506,New England
+5507,Others
+5508,Others
+5509,Michigan
+5510,Others
+5511,North Carolina
+5512,Others
+5514,Others
+5515,Others
+5516,Others
+5517,Michigan
+5518,North Carolina
+5519,Ontario
+5522,Others
+5523,Michigan
+5524,Michigan
+5525,Michigan
+5526,Others
+5527,Michigan
+5528,Others
+5530,Michigan
+5531,Michigan
+5532,Michigan
+5533,Michigan
+5534,Michigan
+5535,Michigan
+5538,Michigan
+5539,Others
+5541,Others
+5542,Others
+5544,North Carolina
+5546,Chesapeake
+5547,Michigan
+5549,Chesapeake
+5550,Others
+5553,Others
+5554,Israel
+5555,Michigan
+5556,New England
+5557,Others
+5558,Others
+5559,Michigan
+5560,Michigan
+5561,Michigan
+5562,Michigan
+5563,New England
+5564,Others
+5567,Michigan
+5568,Others
+5570,Others
+5572,Others
+5576,Others
+5577,Michigan
+5578,Others
+5582,Peachtree
+5583,Others
+5584,Others
+5586,Others
+5587,Chesapeake
+5588,Pacific Northwest
+5589,Ontario
+5590,Others
+5593,Others
+5595,Others
+5596,Ontario
+5599,Others
+5601,Others
+5603,Michigan
+5605,Others
+5606,Others
+5607,North Carolina
+5608,Peachtree
+5610,Michigan
+5611,Others
+5612,Michigan
+5613,Others
+5614,Israel
+5616,Others
+5618,Others
+5619,Michigan
+5621,Others
+5622,Michigan
+5623,Michigan
+5624,Mid-Atlantic
+5625,Others
+5626,Others
+5627,Others
+5630,Others
+5632,Peachtree
+5633,New England
+5634,Others
+5635,Israel
+5636,Israel
+5637,Others
+5638,Others
+5639,Others
+5641,Michigan
+5642,Michigan
+5648,Others
+5651,Peachtree
+5653,Others
+5654,Israel
+5655,Others
+5657,Others
+5658,Others
+5659,Others
+5660,Michigan
+5661,Michigan
+5662,Michigan
+5663,Others
+5664,Michigan
+5665,Others
+5666,Mid-Atlantic
+5667,Others
+5669,Others
+5672,Ontario
+5674,Michigan
+5675,Michigan
+5676,Michigan
+5678,Others
+5679,North Carolina
+5681,Others
+5682,Others
+5683,Pacific Northwest
+5684,Mid-Atlantic
+5685,Michigan
+5686,New England
+5687,New England
+5688,Michigan
+5689,Ontario
+5690,Others
+5695,Michigan
+5696,Others
+5697,Michigan
+5699,Ontario
+5700,Others
+5701,Others
+5702,Michigan
+5705,Others
+5706,Michigan
+5708,Michigan
+5709,Michigan
+5710,Michigan
+5712,Michigan
+5713,Michigan
+5714,Michigan
+5715,Israel
+5716,Others
+5719,Ontario
+5720,Others
+5721,Others
+5722,Others
+5724,Chesapeake
+5725,Others
+5726,Others
+5727,North Carolina
+5728,Others
+5729,Others
+5730,Others
+5732,Mid-Atlantic
+5734,Peachtree
+5735,New England
+5736,Others
+5737,Others
+5740,Others
+5744,Others
+5746,New England
+5747,Israel
+5748,Pacific Northwest
+5752,New England
+5753,Others
+5754,Others
+5756,Michigan
+5762,North Carolina
+5763,Others
+5765,Others
+5773,Others
+5774,Michigan
+5775,Others
+5776,Ontario
+5777,Others
+5781,Others
+5783,Others
+5785,Others
+5787,Others
+5800,Others
+5801,Others
+5802,Others
+5803,Pacific Northwest
+5804,Chesapeake
+5805,Others
+5806,Others
+5809,Others
+5810,Others
+5811,Others
+5813,New England
+5816,Others
+5817,Others
+5818,Others
+5819,Others
+5821,Ontario
+5822,Others
+5823,Others
+5826,Others
+5827,Pacific Northwest
+5828,Peachtree
+5829,Others
+5830,Chesapeake
+5831,Others
+5834,Ontario
+5835,Others
+5836,Others
+5837,Others
+5839,Others
+5840,Peachtree
+5841,Chesapeake
+5842,Others
+5843,Michigan
+5846,New England
+5847,Others
+5848,Peachtree
+5849,Others
+5851,Others
+5852,Others
+5853,Michigan
+5854,North Carolina
+5855,Others
+5856,New England
+5857,Others
+5858,Others
+5860,Michigan
+5863,Others
+5864,Others
+5865,Others
+5866,Others
+5869,Others
+5870,Ontario
+5871,Others
+5872,Others
+5874,Others
+5875,Others
+5876,Others
+5877,Others
+5878,Michigan
+5881,Others
+5883,Others
+5885,Ontario
+5887,Others
+5888,Others
+5889,Others
+5891,Others
+5892,Others
+5894,Others
+5895,Mid-Atlantic
+5899,Others
+5900,Peachtree
+5901,Michigan
+5902,New England
+5903,Others
+5906,Others
+5907,Michigan
+5908,Others
+5910,Others
+5911,Ontario
+5913,Others
+5914,Others
+5915,Michigan
+5918,Others
+5919,North Carolina
+5920,Pacific Northwest
+5921,Ontario
+5923,Others
+5924,Others
+5926,Michigan
+5927,Michigan
+5928,Israel
+5929,Others
+5930,Others
+5932,Others
+5933,Others
+5934,Others
+5935,Others
+5937,Pacific Northwest
+5940,Others
+5941,Pacific Northwest
+5943,Others
+5944,Indiana
+5945,Chesapeake
+5947,Others
+5948,Others
+5949,Others
+5950,Chesapeake
+5951,Israel
+5952,Others
+5953,Others
+5954,Chesapeake
+5957,Chesapeake
+5959,Others
+5960,Others
+5962,New England
+5963,Michigan
+5964,Others
+5965,Others
+5966,Others
+5968,Others
+5970,Pacific Northwest
+5973,Others
+5974,Others
+5975,Pacific Northwest
+5976,Others
+5977,Pacific Northwest
+5980,Michigan
+5982,Michigan
+5983,Others
+5985,Others
+5986,Others
+5987,Israel
+5988,Others
+5989,Michigan
+5990,Israel
+5991,Others
+5992,Mid-Atlantic
+5993,Others
+5994,Others
+5996,Others
+5997,Others
+5998,Others
+5999,Others
+6000,Others
+6001,Others
+6002,Michigan
+6003,North Carolina
+6004,North Carolina
+6005,Michigan
+6007,Others
+6009,Ontario
+6010,Others
+6011,Michigan
+6012,Indiana
+6013,Michigan
+6014,Others
+6016,Mid-Atlantic
+6017,Others
+6018,Others
+6019,Michigan
+6020,Michigan
+6021,Chesapeake
+6022,Others
+6023,Peachtree
+6024,Others
+6025,Others
+6026,Others
+6027,Others
+6029,Michigan
+6032,Others
+6033,Michigan
+6035,Others
+6036,Others
+6038,Others
+6039,Others
+6041,Others
+6043,Michigan
+6044,Others
+6045,Others
+6047,Others
+6049,Israel
+6050,Others
+6052,Ontario
+6053,Michigan
+6054,Others
+6055,Others
+6056,Others
+6057,Michigan
+6059,Others
+6060,Others
+6062,Others
+6063,Others
+6064,Others
+6065,Michigan
+6066,Michigan
+6067,Michigan
+6068,Others
+6070,Ontario
+6071,Michigan
+6072,Others
+6073,Michigan
+6074,Michigan
+6075,Michigan
+6076,Pacific Northwest
+6077,Michigan
+6078,Michigan
+6079,Michigan
+6081,Michigan
+6083,Others
+6084,Others
+6085,Michigan
+6086,Michigan
+6087,Michigan
+6088,Michigan
+6089,Michigan
+6090,Michigan
+6091,Michigan
+6092,Michigan
+6093,Michigan
+6094,Michigan
+6096,Michigan
+6097,Michigan
+6098,Michigan
+6099,Michigan
+6100,Michigan
+6101,Michigan
+6102,Michigan
+6103,Others
+6104,Israel
+6106,Others
+6107,Others
+6110,Ontario
+6111,Others
+6112,Michigan
+6113,Michigan
+6114,Michigan
+6116,Michigan
+6117,Michigan
+6118,Others
+6119,Michigan
+6120,Michigan
+6121,Michigan
+6122,Michigan
+6127,Others
+6128,Michigan
+6129,Pacific Northwest
+6130,Ontario
+6131,Others
+6132,Others
+6133,Others
+6135,Ontario
+6136,Michigan
+6137,Michigan
+6138,Michigan
+6139,Peachtree
+6140,Ontario
+6141,Ontario
+6144,Others
+6145,Others
+6146,Others
+6147,Others
+6149,Israel
+6150,Michigan
+6152,Michigan
+6153,New England
+6155,Others
+6156,Others
+6157,Others
+6160,Others
+6161,New England
+6162,Ontario
+6164,Others
+6166,Others
+6167,Others
+6168,Israel
+6170,Others
+6171,Others
+6172,New England
+6174,Others
+6175,Others
+6177,Peachtree
+6178,Others
+6180,Others
+6181,Others
+6184,Others
+6186,Others
+6187,Others
+6188,Others
+6189,Chesapeake
+6190,Michigan
+6191,Others
+6193,Michigan
+6194,Chesapeake
+6195,Others
+6199,Others
+6200,Others
+6201,New England
+6202,Ontario
+6203,Mid-Atlantic
+6204,Others
+6213,Chesapeake
+6214,North Carolina
+6215,North Carolina
+6217,Others
+6218,Others
+6219,Others
+6220,Others
+6222,Others
+6223,Others
+6224,New England
+6225,Others
+6226,Mid-Atlantic
+6230,Israel
+6232,Others
+6237,Others
+6238,Others
+6239,Chesapeake
+6240,North Carolina
+6300,Others
+6301,New England
+6302,Others
+6303,Others
+6304,Others
+6305,Others
+6306,Others
+6308,Others
+6309,Others
+6312,Chesapeake
+6314,Others
+6315,Others
+6317,Others
+6318,Others
+6319,Others
+6320,Others
+6321,Others
+6322,Others
+6323,Ontario
+6324,New England
+6325,Peachtree
+6326,Chesapeake
+6327,Mid-Atlantic
+6328,New England
+6329,New England
+6331,Ontario
+6332,North Carolina
+6333,New England
+6334,Chesapeake
+6335,New England
+6336,Ontario
+6337,New England
+6339,Ontario
+6340,Peachtree
+6341,Peachtree
+6342,Ontario
+6343,Pacific Northwest
+6344,Michigan
+6345,Michigan
+6346,New England
+6348,Others
+6350,Pacific Northwest
+6351,Others
+6352,Others
+6353,Others
+6354,Others
+6355,Others
+6356,Others
+6357,Others
+6358,Others
+6359,Others
+6360,Others
+6361,Others
+6362,Others
+6363,Others
+6364,Others
+6366,Others
+6367,New England
+6369,Others
+6371,Others
+6372,Others
+6376,Others
+6377,Others
+6378,Ontario
+6379,Others
+6381,Others
+6382,Others
+6383,Others
+6386,Others
+6388,Others
+6390,Others
+6391,Others
+6392,Others
+6393,Others
+6394,Others
+6397,Ontario
+6398,Others
+6399,Others
+6400,Others
+6401,Others
+6402,Others
+6403,Others
+6404,Others
+6406,Others
+6407,Others
+6408,Others
+6410,Others
+6411,Others
+6412,Others
+6413,Others
+6414,Others
+6415,Others
+6416,Others
+6417,Others
+6418,Others
+6419,Others
+6420,Others
+6421,Others
+6422,Others
+6423,Others
+6424,Others
+6425,Michigan
+6426,North Carolina
+6428,Michigan
+6429,Others
+6430,Others
+6432,Others
+6433,Others
+6434,Others
+6435,Others
+6436,Others
+6440,Others
+6441,Others
+6442,Pacific Northwest
+6443,Pacific Northwest
+6444,Others
+6445,Pacific Northwest
+6447,Others
+6449,Others
+6451,Indiana
+6453,Others
+6455,Others
+6457,Others
+6458,Others
+6459,Others
+6460,Others
+6461,Ontario
+6463,Others
+6464,Others
+6465,Pacific Northwest
+6467,Others
+6468,Others
+6471,Peachtree
+6473,Others
+6474,Others
+6476,Others
+6479,Others
+6481,Ontario
+6482,Others
+6483,Others
+6484,Others
+6485,Others
+6487,Others
+6488,Others
+6489,Others
+6490,Others
+6492,Others
+6493,Michigan
+6494,Others
+6498,Indiana
+6499,Others
+6500,North Carolina
+6502,North Carolina
+6503,Pacific Northwest
+6504,Chesapeake
+6505,Chesapeake
+6506,Others
+6507,Others
+6508,Others
+6509,Others
+6510,Others
+6512,North Carolina
+6513,Ontario
+6514,Ontario
+6515,Others
+6517,Others
+6518,Others
+6519,Others
+6520,Others
+6524,Others
+6525,Others
+6526,Others
+6527,Others
+6528,Michigan
+6529,New England
+6530,Others
+6531,Michigan
+6532,Michigan
+6533,Michigan
+6535,Others
+6536,Others
+6537,Ontario
+6538,Michigan
+6540,Others
+6541,Others
+6542,Others
+6543,Chesapeake
+6544,Ontario
+6545,Michigan
+6546,Others
+6547,Others
+6548,Michigan
+6550,Michigan
+6552,Michigan
+6553,Others
+6554,Others
+6556,Michigan
+6557,Michigan
+6558,Michigan
+6559,Michigan
+6560,Others
+6561,Michigan
+6563,Others
+6564,Ontario
+6565,North Carolina
+6566,Michigan
+6567,Michigan
+6568,Michigan
+6569,Michigan
+6570,Michigan
+6573,Michigan
+6574,Others
+6575,Others
+6579,Others
+6580,Michigan
+6581,Michigan
+6582,Michigan
+6583,Michigan
+6584,Chesapeake
+6585,Others
+6586,Others
+6588,Michigan
+6589,Michigan
+6590,Others
+6591,Michigan
+6592,Michigan
+6593,Others
+6594,Michigan
+6595,Michigan
+6597,Michigan
+6599,Michigan
+6600,Michigan
+6601,Others
+6604,Others
+6605,Others
+6606,Others
+6608,Others
+6610,Michigan
+6611,Michigan
+6612,Others
+6613,Others
+6615,Michigan
+6616,Michigan
+6618,Michigan
+6619,Others
+6620,New England
+6621,Others
+6622,Others
+6624,Others
+6626,Others
+6627,Michigan
+6628,Others
+6630,Others
+6631,Michigan
+6632,Ontario
+6633,Michigan
+6635,Michigan
+6636,Others
+6637,Michigan
+6638,Michigan
+6639,North Carolina
+6640,Others
+6642,Michigan
+6643,Others
+6644,Others
+6645,Others
+6646,Others
+6647,Others
+6648,Others
+6649,Michigan
+6650,Others
+6651,Others
+6652,Others
+6653,Others
+6654,Others
+6655,Others
+6656,Others
+6657,Others
+6658,Others
+6659,Others
+6660,Others
+6662,Others
+6664,Others
+6665,Others
+6666,Others
+6667,Mid-Atlantic
+6668,Others
+6670,Others
+6671,Others
+6672,Others
+6674,Others
+6676,Others
+6677,Others
+6679,Others
+6680,Others
+6682,Others
+6683,Others
+6684,Others
+6685,Others
+6686,Others
+6688,Others
+6690,New England
+6691,New England
+6692,Others
+6693,Others
+6694,Others
+6695,Others
+6696,Pacific Northwest
+6697,Others
+6699,Others
+6700,Others
+6701,Others
+6702,Others
+6704,Others
+6705,Peachtree
+6706,Others
+6707,Others
+6708,Others
+6709,Others
+6711,Others
+6712,Peachtree
+6714,Peachtree
+6715,Peachtree
+6716,Peachtree
+6717,Others
+6718,Others
+6720,Others
+6721,Indiana
+6722,Others
+6723,New England
+6725,Ontario
+6727,Others
+6729,North Carolina
+6730,Others
+6731,New England
+6732,Others
+6736,Israel
+6738,Israel
+6739,Israel
+6740,Israel
+6741,Israel
+6742,Michigan
+6743,Others
+6744,Others
+6746,Others
+6748,Others
+6749,Others
+6750,Peachtree
+6751,Others
+6753,Michigan
+6754,Others
+6755,Others
+6758,Others
+6762,New England
+6763,New England
+6764,Others
+6765,Others
+6766,Others
+6768,Others
+6771,Others
+6800,Others
+6801,Others
+6802,Chesapeake
+6803,Others
+6804,Others
+6805,Others
+6806,Others
+6807,Others
+6808,Mid-Atlantic
+6809,Others
+6810,Others
+6811,New England
+6812,New England
+6813,Others
+6814,Others
+6817,Others
+6818,Others
+6819,Others
+6820,Others
+6821,Others
+6822,Others
+6823,Others
+6824,Others
+6825,Others
+6826,Others
+6827,Others
+6829,Peachtree
+6830,Others
+6831,Pacific Northwest
+6832,Others
+6833,Others
+6834,Others
+6836,Others
+6837,Others
+6838,Others
+6840,Others
+6841,Others
+6842,Peachtree
+6843,Others
+6844,Others
+6845,Pacific Northwest
+6846,Others
+6847,Others
+6850,Others
+6851,Others
+6852,Michigan
+6854,Ontario
+6855,Others
+6856,Ontario
+6858,Others
+6859,Ontario
+6860,Mid-Atlantic
+6861,Michigan
+6862,Michigan
+6863,Chesapeake
+6864,Ontario
+6865,Ontario
+6866,Ontario
+6867,Ontario
+6868,Others
+6869,Others
+6870,Others
+6871,Others
+6872,Others
+6873,Others
+6874,Others
+6875,Ontario
+6877,Michigan
+6878,Ontario
+6880,Others
+6881,Ontario
+6882,Chesapeake
+6883,Others
+6884,Others
+6885,Others
+6886,Others
+6887,Peachtree
+6888,North Carolina
+6889,Others
+6891,Others
+6892,Others
+6893,Chesapeake
+6894,North Carolina
+6895,New England
+6896,Others
+6897,Mid-Atlantic
+6898,Others
+6899,North Carolina
+6900,Others
+6901,Others
+6902,Others
+6904,Others
+6905,Peachtree
+6906,Others
+6907,Others
+6908,North Carolina
+6909,Others
+6910,Peachtree
+6911,Others
+6912,Others
+6913,Others
+6914,Michigan
+6915,Others
+6916,Others
+6917,Ontario
+6918,Others
+6919,Peachtree
+6920,Others
+6921,Mid-Atlantic
+6922,Others
+6923,Others
+6925,Peachtree
+6926,Others
+6927,Others
+6928,Others
+6929,Others
+6931,Others
+6932,North Carolina
+6933,New England
+6934,Others
+6935,Others
+6936,Others
+6937,Others
+6938,Others
+6940,Others
+6941,Others
+6943,Mid-Atlantic
+6944,Peachtree
+6945,Mid-Atlantic
+6946,Others
+6947,Others
+6948,Others
+6949,Others
+6950,Others
+6951,Others
+6952,Others
+6953,Others
+6954,Michigan
+6955,Others
+6956,Indiana
+6957,Others
+6958,Michigan
+6959,Pacific Northwest
+6960,Others
+6961,Others
+6962,Others
+6963,Michigan
+6964,Others
+6965,Others
+6967,Others
+6968,Others
+6969,Others
+6970,Others
+6971,Others
+6973,Others
+6974,Others
+6975,Ontario
+6976,Others
+6977,Ontario
+6978,Ontario
+6979,Others
+6981,Others
+6982,Others
+6983,Others
+6985,Others
+6986,Others
+6987,Ontario
+6988,Others
+6989,Others
+6990,Others
+6991,Others
+6992,Ontario
+6993,Others
+6995,Others
+6996,Others
+6997,Others
+6998,Others
+6999,Others
+7000,Others
+7001,Others
+7002,Others
+7004,Others
+7006,Others
+7009,Others
+7010,Others
+7013,Ontario
+7016,Others
+7017,Others
+7018,Others
+7019,Others
+7020,Michigan
+7021,Others
+7022,Ontario
+7023,Others
+7024,Mid-Atlantic
+7025,Others
+7026,Others
+7027,Others
+7028,Others
+7029,North Carolina
+7030,Others
+7031,Others
+7032,Pacific Northwest
+7033,Others
+7034,Pacific Northwest
+7035,Others
+7036,Others
+7037,Others
+7038,Others
+7039,Israel
+7040,Others
+7041,Others
+7042,Others
+7043,Others
+7045,Mid-Atlantic
+7046,Others
+7047,Others
+7048,Others
+7050,Others
+7051,Others
+7052,Ontario
+7053,Others
+7054,Michigan
+7055,Others
+7056,Michigan
+7057,Others
+7058,Ontario
+7059,Others
+7060,Peachtree
+7063,Others
+7064,Others
+7065,Others
+7066,Others
+7067,Israel
+7068,Others
+7069,Others
+7070,Others
+7071,Others
+7072,Others
+7073,Michigan
+7074,Others
+7075,Others
+7076,Peachtree
+7077,Others
+7078,Others
+7079,Israel
+7080,Others
+7081,Others
+7083,Israel
+7084,Michigan
+7085,Others
+7086,Others
+7088,Others
+7091,Others
+7093,Others
+7094,Others
+7095,Others
+7096,Others
+7097,Others
+7101,Michigan
+7102,Others
+7103,Others
+7104,Peachtree
+7106,Others
+7107,Others
+7108,Others
+7109,Michigan
+7110,Mid-Atlantic
+7111,Others
+7112,Israel
+7113,Others
+7115,Others
+7116,Others
+7117,Others
+7118,Pacific Northwest
+7119,Others
+7120,Others
+7121,Others
+7122,Others
+7123,Others
+7124,Others
+7125,Others
+7126,New England
+7127,New England
+7128,Others
+7129,Others
+7130,Others
+7133,New England
+7134,Others
+7135,Others
+7136,Ontario
+7137,Others
+7138,Others
+7140,Others
+7141,Others
+7142,Others
+7143,Michigan
+7144,Michigan
+7145,Michigan
+7146,Others
+7147,Michigan
+7148,Others
+7149,Others
+7150,Michigan
+7151,Others
+7152,Others
+7153,New England
+7154,Michigan
+7155,Michigan
+7156,Michigan
+7157,Others
+7158,Others
+7159,Others
+7160,Michigan
+7161,Others
+7162,Others
+7163,Others
+7164,New England
+7165,Others
+7166,Michigan
+7167,Others
+7168,Michigan
+7169,Others
+7170,Others
+7171,Michigan
+7172,Michigan
+7173,Others
+7174,Michigan
+7175,Michigan
+7176,Ontario
+7177,Israel
+7178,Michigan
+7179,Others
+7180,Others
+7181,Others
+7182,Others
+7183,Others
+7184,Others
+7185,Others
+7187,Michigan
+7188,Michigan
+7189,Others
+7190,Others
+7191,Michigan
+7192,Michigan
+7193,Others
+7194,Others
+7195,Michigan
+7196,Michigan
+7197,Michigan
+7198,Indiana
+7199,Others
+7200,Ontario
+7201,Others
+7202,Michigan
+7203,Michigan
+7204,Pacific Northwest
+7205,Others
+7206,Michigan
+7208,Michigan
+7209,Michigan
+7210,Michigan
+7211,Michigan
+7212,New England
+7213,Michigan
+7214,Others
+7215,Others
+7216,Others
+7217,Others
+7218,Michigan
+7219,Michigan
+7220,Michigan
+7221,Michigan
+7222,Michigan
+7223,Michigan
+7224,Michigan
+7225,Michigan
+7226,Michigan
+7227,Others
+7228,Others
+7229,Others
+7230,Others
+7231,Others
+7232,Michigan
+7234,Michigan
+7235,Others
+7237,Others
+7238,Others
+7239,Others
+7240,New England
+7242,Others
+7243,Others
+7244,Michigan
+7245,Others
+7246,Others
+7247,Michigan
+7248,Michigan
+7249,Others
+7250,Michigan
+7251,Others
+7254,Michigan
+7255,Others
+7256,Michigan
+7257,Others
+7258,Others
+7259,New England
+7260,Others
+7262,Others
+7263,Others
+7264,Others
+7265,North Carolina
+7266,New England
+7267,Ontario
+7268,Others
+7269,New England
+7270,North Carolina
+7271,Others
+7272,Others
+7273,Others
+7274,Others
+7275,Others
+7277,Others
+7278,Others
+7279,Others
+7280,Others
+7281,Others
+7282,Others
+7283,Others
+7284,Others
+7286,Israel
+7287,Others
+7288,Others
+7289,Michigan
+7290,Others
+7291,Others
+7292,Others
+7293,Others
+7294,Others
+7295,Others
+7296,Others
+7297,Others
+7298,Others
+7299,Others
+7301,Others
+7302,Israel
+7303,Others
+7305,North Carolina
+7306,New England
+7308,Others
+7309,Others
+7311,Others
+7312,Others
+7313,Others
+7314,New England
+7315,Peachtree
+7316,Others
+7317,Others
+7318,Others
+7319,Others
+7321,Others
+7322,Others
+7323,Others
+7324,Others
+7325,Others
+7326,Others
+7327,Others
+7329,Ontario
+7330,Chesapeake
+7331,Others
